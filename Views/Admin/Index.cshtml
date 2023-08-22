@@ -1,0 +1,110 @@
+﻿@model VMAdminIndex
+@{
+    int sn = 1;
+      DateTime currentDateTime = DateTime.Now;
+    string formattedDate = currentDateTime.ToString("MM/dd/yyyy");
+}
+<div class="container">
+    <h1 class="text-center mb-3">Task List</h1>
+    <div class="d-flex justify-content-end w-100 mb-4">
+        <div class="w-75">
+            <form class="w-100 d-flex" style="gap:5px" asp-controller="Admin" asp-action="filterData" method="post">
+                <input type="date" name="FromDate" value="@Model.strFromDate" class="form-control" />
+                <input type="date" name="ToDate" value="@Model.strToDate" class="form-control" />
+                <select class="form-select w-50" name="EmployeeId" id="userNameSelectBox">
+                    <option selected value="">Select Name</option>
+                    @foreach (var user in Model.EmployeeList)
+                    {
+                        <option value="@(user.Id)">@(user.Name)</option>
+                    }
+                </select>
+                <div class="d-flex w-75" style="gap:5px">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search by Task" name="SearchTerm">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+        @if (Model.CanAddTask)
+        {
+            <div style="margin-left:10px">
+                <button id="showAddPopupBox" class="btn btn-primary">Add Task</button>
+            </div>
+        }
+
+    </div>
+    <div>
+        <table id="myTable" class="table mt-4 table-stripped table-bordered">
+            <thead class="table-dark">
+                <tr>
+
+                    <th>SN</th>
+                    <th>Task</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>IP-Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var task in Model.TaskList)
+                {
+                    <tr>
+                        <td>@(sn++)</td>
+                        <td>@(task.Task)</td>
+                        <td>@(task.Employee.Name)</td>
+                        <td>@(task.TaskPerformedDate)</td>
+                        <td>@(task.Ipaddress)</td>
+                        <td>
+                            @if (Model.EmployeeID == task.EmployeeId && formattedDate == (task.TaskPerformedDate.ToString("MM/dd/yyyy")).ToString())
+                            {
+                                <button class="btn btn-warning" id=@(task.Id) onclick="showAdminEditBox(this.id);">Update</button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+@section Scripts{
+<script>
+ $(document).ready(function () {
+    $("#closeAddPopUpBtn").on("click", () => {
+        $("#blurBox").addClass("d-none");
+        $("#addDataFormBox").addClass("d-none");
+    });
+
+    $("#showAddPopupBox").on("click", () => {
+        $("#blurBox").removeClass("d-none");
+        $("#addDataFormBox").removeClass("d-none");
+    });
+
+    $("#addTodayTask").on("click", () => {
+        event.preventDefault();
+        const form = document.getElementById("addTaskForm");
+        const formAction = "@Url.Action("addTask", "UserTask")";
+        form.action = formAction;
+        form.submit();
+    });
+
+   
+    $('#myTable').DataTable();
+});
+
+ function showAdminEditBox(x) {
+          $("#blurBox").removeClass("d-none");
+        $("#editAdminTaskBox_" + x).removeClass("d-none");
+    }
+
+    function hideAdminEdit(x) {
+          $("#blurBox").addClass("d-none");
+        $("#" + x).addClass("d-none");
+    }
+
+</script>
+
+}

@@ -1,0 +1,62 @@
+﻿@model VMAdminIndex
+@{
+    int sn = 1;
+}
+ <div class="container">
+     <h1 class="text-center mb-3">Employee List</h1>
+    <div class="d-flex justify-content-end mb-4">
+        <div>
+        <button class="btn btn-success" id="showAddUserPopupBox">Add</button>
+        </div>
+    </div>
+  <table class="table">
+  <thead class="table-dark">
+   <th>SN</th>
+   <th>Name</th>
+   <th>Email</th>
+   <th>Address</th>
+   <th>Action</th>
+  </thead>
+  <tbody>
+            @foreach(var employee in Model.EmployeeList)
+            {
+
+             <tr>
+                <td>@(sn++)</td>
+                <td>@(employee.Name)</td>
+                <td>@(employee.Email)</td>
+                <td>@(employee.Address)</td>
+                <td>
+                     @using (Html.BeginForm("deleteUser", "User", FormMethod.Post)){
+                        <input hidden name="employeeId" value="@(employee.Id)"/>
+                        <button type="submit"  class="btn btn-danger">Delete</button>
+                   }
+                </td>
+            </tr>
+            }
+  </tbody>
+</table>
+
+  </div>
+  @section Scripts{
+    <script>
+           $("#closeAddUserPopUpBtn").on("click",()=>{
+          $("#blurBox").addClass("d-none");
+          $("#addUserDataFormBox").addClass("d-none");
+         });
+        $("#showAddUserPopupBox").on("click",()=>{
+          $("#blurBox").removeClass("d-none");
+          $("#addUserDataFormBox").removeClass("d-none");
+        });
+            $("#addEmployee").on("click",()=>{
+         event.preventDefault(); 
+        const form = document.getElementById("addEmployeeForm");
+        const formAction = "@Url.Action("addUser", "User")";
+        form.action = formAction;
+        form.submit();
+        })
+ 
+      
+    </script>
+
+    }

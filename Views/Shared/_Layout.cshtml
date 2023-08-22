@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - employeeDailyTaskRecorder</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/employeeDailyTaskRecorder.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div style="height: 100vh; background-color: rgba(0, 0, 0, 0.7);z-index:99" class="position-fixed w-100 d-none" id="blurBox">
+        <div class="position-relative d-flex h-100 w-100 justify-content-center align-items-center">
+            <div id="addDataFormBox" class="position-absolute d-none p-4 bg-white w-25 rounded">
+                <div class="d-flex justify-content-end">
+                    <button id="closeAddPopUpBtn" class="btn btn-danger">
+                        Close
+                    </button>
+                </div>
+                <form id="addTaskForm" class="w-100">
+                    <label class="form-label">Task</label>
+                    <textarea class="form-control" name="Task" rows="3"></textarea>
+                    <button id="addTodayTask" class="btn btn-success mt-3 w-100">Add</button>
+                </form>
+            </div>
+            <div id="addUserDataFormBox" class="position-absolute d-none p-4 bg-white w-25 rounded">
+                <div class="d-flex justify-content-end">
+                    <button id="closeAddUserPopUpBtn" class="btn btn-danger">
+                        Close
+                    </button>
+                </div>
+                <form id="addEmployeeForm" class="w-100">
+                    <input hidden name="EmployeeId" value="1" />
+                    <label>Name</label>
+                    <input type="text" name="Name" class="form-control mb-3" placeholder="Enter Employee name" />
+                    <label>Email</label>
+                    <input type="text" name="Email" class="form-control mb-3" placeholder="Enter Employee email" />
+                    <label>Address</label>
+                    <input type="text" name="Address" class="form-control mb-3" placeholder="Enter Employee Address " />
+                    <label>Role</label>
+                    <select name="EmpType" class="form-control mb-3">
+                        <option selected>Select a role</option>
+                        <option value="1">Admin</option>
+                        <option value="2">Employee</option>
+                    </select>
+                    <label>Password</label>
+                    <input type="text" name="Password" class="form-control mb-3" placeholder="Enter Password " />
+                    <button id="addEmployee" class="btn btn-success mt-3 w-100">Add</button>
+                </form>
+            </div>
+              @foreach (var data in Model.TaskList)
+            {
+                <div id="editAdminTaskBox_@data.Id" class="position-absolute d-none p-4 bg-white w-25 rounded">
+                    <div class="d-flex justify-content-end">
+                        <button id="editAdminTaskBox_@data.Id"  onclick="hideAdminEdit(this.id);" class="btn btn-danger">
+                            Close
+                        </button>
+                    </div>
+                    <form asp-controller="UserTask" asp-action="editTask" method="post">
+                        <input type="hidden" value="Admin" name="Type" />
+                        <input hidden name="Id" value=@(data.Id) />
+                        <label class="form-label">Task</label>
+                        <textarea class="form-control" name="Task" rows="3">@(data.Task)</textarea>
+                        <button type="submit" class="btn btn-warning mt-3 w-100">Update</button>
+                    </form>
+                </div>
+            }
+        </div>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+            <div class="container-fluid">
+                <h1>Admin</h1>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Task</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Employee</a>
+                        </li>
+                             <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Logout">Logout</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    @RenderBody()
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
