@@ -1,92 +1,89 @@
 ﻿@{
     Layout = null;
 }
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .main-div{
-            margin: 100px auto;
-            width: 650px;
-            border-radius: 5px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        }
-    </style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .main-div {
+        margin: 100px auto;
+        border-radius: 5px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        max-width: 500px;
+    }
+
+    .error {
+        color: red;
+    }
+</style>
 <body>
-    <div class="d-flex gap-5 align-items-center p-4 main-div">
-        <div class="w-50">
-            <img class="w-100 h-100" src="/Img/employee.png" alt="">
+    <div class="p-4 main-div">
+        <div class="w-100 d-flex align-items-center flex-column mb-3">
+            <div class="w-25 h-25">
+                <img class="w-100 h-100" src="/Img/logo.png" alt="">
+            </div>
+            <h3>Login To Your Account</h3>
         </div>
-       <form id="employeeLoginForm" class="w-50">
-        @if (TempData.ContainsKey("ErrorMessage"))
+        <form  asp-controller="Auth" asp-action="authenticateUser" id="employeeLoginForm" class="w-100" method="post">
+            @if (TempData.ContainsKey("ErrorMessage"))
             {
                 <div class="alert alert-danger">
                     @TempData["ErrorMessage"]
                 </div>
-            }  
-        <input type="email" name="email" class="form-control " placeholder="Enter your email">
-        <p id="emailErrorMsg" class="mb-3 text-danger"></p>
-        <input type="password" name="password" class="form-control" placeholder="Enter your password">
-        <p id="passwordErrorMsg" class="mb-3 text-danger"></p>
-        <button id="employeeLoginFormBtn" class="btn btn-success w-100">Submit</button>
-       </form>
+            }
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email">
+            <label id="email-error" class="error" for="email"></label>
+            <input type="password" id="password" name="password" class="form-control mt-4" placeholder="Enter your password">
+            <label id="password-error" class="error" for="password"></label>
+            <div class="form-check mt-4">
+                <input type="checkbox" class="form-check-input " id="showPasswordCheckBox">
+                <label class="form-check-label" for="showPasswordCheckBox">Show Password</label>
+            </div>
+            <button id="employeeLoginFormBtn" class="btn btn-success w-100 mt-4">Submit</button>
+        </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <script>
-        $("#employeeLoginFormBtn").on("click", (event) => {
-  event.preventDefault();
-  const emailPattern = /^[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,4}$/;
-  // empty validation
-  if (
-    $("input[type='email']").val() == "" ||
-    $("input[type='password'").val() == ""
-  ) {
-    if ($("input[type='email']").val() == "") {
-      $("#emailErrorMsg").html("Empty email field");
-      $("input[type='email']").addClass("is-invalid")
-    }
-    if($("input[type='password']").val() == ""){
-      $("#passwordErrorMsg").html("Empty password field");
-      $("input[type='password']").addClass("is-invalid");
-    }
-    return false;
-  }
-  if(!emailPattern.test( $("input[type='email']").val())){
-    $("#emailErrorMsg").html("Invalid email format");
-    $("input[type='email']").addClass("is-invalid")
-    return false;
-  }
-  if ($("input[type='password']").val().length < 5) {
-    $("#passwordErrorMsg").html("Password length must be more than 5");
-    $("input[type='password']").addClass("is-invalid");
-    return false;
-}
-  const form = document.getElementById("employeeLoginForm");
-        const formAction = "@Url.Action("authenticateUser", "Auth")";
-        form.action = formAction;
-        form.submit();
+        $(document).ready(function(){
 
-});
-$("input[type='email']").on("keypress",(event)=>{
-  if($("input[type='email']").hasClass("is-invalid")){
-    if(event.val !== ""){
-      $("#emailErrorMsg").html("");
-      $("input[type='email']").removeClass("is-invalid");
-    }
-  }
-})
-$("input[type='password']").on("keypress",(event)=>{
-  if($("input[type='password']").hasClass("is-invalid")){
-    if(event.val !== ""){
-      $("#passwordErrorMsg").html("");
-      $("input[type='password']").removeClass("is-invalid");
-    }
-  }
-})
+                           $('#employeeLoginForm').validate({
+                            rules: {
+                                email:{
+                                    required:true,
+                                    email:true,
+                                },
+                                password: {
+                                    required: true,
+                                    minlength: 5
+                                }
+                            },
+                            messages: {
+                                email: {
+                                    required:"Email cannot be empty",
+                                    email:"Enter valid email"
+                                },
+                                password: {
+                                    required: "Password cannot be empty",
+                                    minlength: "Password length must be at least 5 characters"
+                                }
+                            }
+                        });
+
+
+                            $("#showPasswordCheckBox").on("change", () => {
+                            if ($("#showPasswordCheckBox").prop("checked")) {
+                                $("#password").attr("type", "text");
+                            } else {
+                                $("#password").attr("type", "password");
+                            }
+                        });
+        });
+
     </script>
 </body>
-</html>

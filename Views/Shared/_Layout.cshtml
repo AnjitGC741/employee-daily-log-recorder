@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="~/employeeDailyTaskRecorder.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        .custom-badge {
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .badge-success {
+            background-color: #D1E7DD;
+        }
+
+        .badge-danger {
+            background-color: #F8D7DA;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <div style="height: 100vh; background-color: rgba(0, 0, 0, 0.7);z-index:99" class="position-fixed w-100 d-none" id="blurBox">
@@ -15,46 +38,70 @@
             <div id="addDataFormBox" class="position-absolute d-none p-4 bg-white w-25 rounded">
                 <div class="d-flex justify-content-end">
                     <button id="closeAddPopUpBtn" class="btn btn-danger">
-                        Close
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                        </svg>
                     </button>
                 </div>
-                <form id="addTaskForm" class="w-100">
+                <form id="addTaskForm" method="post" class="w-100">
                     <label class="form-label">Task</label>
-                    <textarea class="form-control" name="Task" rows="3"></textarea>
+                    <textarea class="form-control" id="taskInputField" name="Task" rows="3"></textarea>
+                    <p class="text-danger" id="emptyAddTaskInputFiled"></p>
                     <button id="addTodayTask" class="btn btn-success mt-3 w-100">Add</button>
                 </form>
             </div>
             <div id="addUserDataFormBox" class="position-absolute d-none p-4 bg-white w-25 rounded">
                 <div class="d-flex justify-content-end">
-                    <button id="closeAddUserPopUpBtn" class="btn btn-danger">
-                        Close
+                    <button id="closeAddUserPopUpBtn" class="btn btn-danger mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                        </svg>
                     </button>
                 </div>
-                <form id="addEmployeeForm" class="w-100">
-                    <input hidden name="EmployeeId" value="1" />
+                <form id="addEmployeeForm" asp-controller="User" asp-action="addUser" method="post" class="w-100">
+                    @if (TempData.ContainsKey("emailPresence"))
+                    {
+                        if (TempData["emailPresence"].ToString() == "True")
+                        {
+                            <div class="alert alert-danger" id="emailErrorMsg">
+                                Email is already taken
+                            </div>
+                        }
+                    }
                     <label>Name</label>
-                    <input type="text" name="Name" class="form-control mb-3" placeholder="Enter Employee name" />
-                    <label>Email</label>
-                    <input type="text" name="Email" class="form-control mb-3" placeholder="Enter Employee email" />
-                    <label>Address</label>
-                    <input type="text" name="Address" class="form-control mb-3" placeholder="Enter Employee Address " />
-                    <label>Role</label>
-                    <select name="EmpType" class="form-control mb-3">
-                        <option selected>Select a role</option>
+                    <input type="text" name="Name" class="form-control" placeholder="Enter Employee name" />
+                    <p id="Name-error" class="error" for="name"></p>
+                    <label class="mt-2">Email</label>
+                    <input type="email" name="Email" class="form-control" placeholder="Enter Employee email" />
+                    <p id="Email-error" class="error" for="Email"></p>
+                    <label class="mt-2">Address</label>
+                    <input type="text" name="Address" class="form-control" placeholder="Enter Employee Address " />
+                    <p id="Address-error" class="error" for="Address"></p>
+                    <label class="mt-2">Role</label>
+                    <select name="EmpType" class="form-control">
+                        <option selected value="">Select a role</option>
                         <option value="1">Admin</option>
                         <option value="2">Employee</option>
                     </select>
-                    <label>Password</label>
-                    <input type="text" name="Password" class="form-control mb-3" placeholder="Enter Password " />
-                    <button id="addEmployee" class="btn btn-success mt-3 w-100">Add</button>
+                    <p id="EmpType-error" class="error" for="EmpType"></p>
+                    <label class="mt-2">Password</label>
+                    <input type="password" name="Password" id="addDataPassword" class="form-control" placeholder="Enter Password " />
+                    <p id="Password-error" class="error" for="Password"></p>
+                    <div class="form-check mt-4">
+                        <input type="checkbox" class="form-check-input " id="showAddDataPasswordCheckBox">
+                        <label class="form-check-label" for="showAddDataPasswordCheckBox">Show Password</label>
+                    </div>
+                    <button id="addEmployee" type="submit" class="btn btn-success mt-3 w-100">Add</button>
                 </form>
             </div>
-              @foreach (var data in Model.TaskList)
+            @foreach (var data in Model.TaskList)
             {
                 <div id="editAdminTaskBox_@data.Id" class="position-absolute d-none p-4 bg-white w-25 rounded">
                     <div class="d-flex justify-content-end">
-                        <button id="editAdminTaskBox_@data.Id"  onclick="hideAdminEdit(this.id);" class="btn btn-danger">
-                            Close
+                        <button id="editAdminTaskBox_@data.Id" onclick="hideAdminEdit(this.id);" class="btn btn-danger">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                            </svg>
                         </button>
                     </div>
                     <form asp-controller="UserTask" asp-action="editTask" method="post">
@@ -66,34 +113,67 @@
                     </form>
                 </div>
             }
+   @*         @foreach (var data in Model.EmployeeList)
+            {
+                <div id="editUserDataFormBox_@data.Id" class="position-absolute d-none p-4 bg-white w-25 rounded">
+                    <div class="d-flex justify-content-end">
+                        <button id="editUserDataFormBox_@data.Id" onclick="hideEditUserDataFormBox(this.id);" class="btn btn-danger">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <form id="updateUserForm_@data.Id" method="post" class="w-100">
+                        <input hidden name="Id" value=@(data.Id) />
+                        <label>Name</label>
+                        <input type="text" name="Name" class="form-control mb-3" placeholder="Enter Employee name" value=@(data.Name) />
+                        <label>Email</label>
+                        <input type="text" name="Email" class="form-control mb-3" placeholder="Enter Employee email" value=@(data.Email) />
+                        <label>Address</label>
+                        <input type="text" name="Address" class="form-control mb-3" placeholder="Enter Employee Address " value=@(data.Address) />
+                        <label>Role</label>
+                        <select name="EmpType" class="form-control mb-3">
+                            <option value=@(data.EmpType)>@(data.EmpType)</option>
+                            <option value="1">Admin</option>
+                            <option value="2">Employee</option>
+                        </select>
+                        <label>Password</label>
+                        <input type="text" value=@(data.Password) id="updateDataPassword" name="Password" class="form-control" placeholder="Enter Password " />
+                        <span class="text-danger" id="passwordEmptyMsg"></span>
+                        <button onclick="validatePassword(@(data.Id));" class="btn btn-warning mt-3 w-100">Update</button>
+                    </form>
+                </div>
+            }*@
         </div>
     </div>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
-            <div class="container-fluid">
-                <h1>Admin</h1>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+    <div class="container mb-4">
+        <nav class="navbar bg-body-tertiary ">
+            <div class="container-fluid border-bottom">
+                <h2 style="color:#337CCF;font-weight:bolder">TASK<span style="color:#1450A3">TALLY</span></h2>
+                <div class="d-flex justify-content-between">
+                    <ul class=d-flex flex-grow-1">
+                        <li class="nav-item fs-5" style="list-style:none">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Task</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item fs-5" style="list-style:none">
                             <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Employee</a>
                         </li>
-                             <li class="nav-item">
+                        <li class="nav-item fs-5" style="list-style:none">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Logout">Logout</a>
-                            </li>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-    </header>
+    </div>
+
     @RenderBody()
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

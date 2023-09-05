@@ -1,0 +1,64 @@
+﻿@model employeeDailyTaskRecorder.Models.VMAdminIndex
+@{
+    int sn = 1;
+}
+<div class="container">
+    <div class="w-100 position-relative" style="height: 20vh;">
+        <div class="w-100 h-100 position-absolute">
+            <img class="w-100 h-100" src="/Img/background.jpg" alt="" style="object-fit:cover">
+        </div>
+
+        <div class="position-absolute top-50 d-flex" id="userIntroDiv" " style="left: 5%;">
+            @foreach(var user in Model.EmployeeList)
+            {
+            <div class=" position-relative rounded-circle" style="background-color: #1a780b;height:200px;width:200px;">
+                <div class="w-100 h-100 rounded-circle" style="overflow:hidden;">
+                  
+                    <img class="w-100 h-100" src=@(user.ProfileImg.ToString() == ""  ? "/Img/nullImage.jpg": user.ProfileImg ) alt="User img" style="object-fit:cover">
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-end p-3">
+                <h1>@(user.Name)</h1>
+                <div class="d-flex" style="gap:15px">
+                    <p class="text-muted fs-6"><ion-icon name="person" class="me-2"></ion-icon>@(user.EmpType)</p>
+                    <p class="text-muted fs-6"><ion-icon name="mail" class="me-2"></ion-icon>@(user.Email)</p>
+                    <p class="text-muted fs-6"><ion-icon name="location" class="me-2"></ion-icon>@(user.Address)</p>
+                </div>
+            </div>
+            }
+        </div>
+
+    </div>
+
+    <div id="tableDiv">
+        <table class="table" id="myTable">
+            <thead class="table-dark">
+                <tr>
+                    <th>SN</th>
+                    <th>Task</th>
+                    <th>Task Peroformed Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var task in Model.TaskList)
+                {
+                <tr>
+                    <td>@(sn++)</td>
+                    <td>@(task.Task)</td>
+                    <td>@(task.TaskPerformedDate)</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+  @section Scripts{
+<script>
+            $(document).ready(function () {
+         $('#myTable').DataTable();
+            });
+        const myDivHeight = $("#userIntroDiv").outerHeight();
+        const calMargin = (myDivHeight / 2) + 40;
+        $("#tableDiv").css("margin-top", calMargin + "px");
+</script>
+  }

@@ -12,8 +12,8 @@ using employeeDailyTaskRecorder.Data;
 namespace employeeDailyTaskRecorder.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230822092522_first")]
-    partial class first
+    [Migration("20230904114704_alter table field")]
+    partial class altertablefield
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,6 +37,9 @@ namespace employeeDailyTaskRecorder.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -44,29 +47,30 @@ namespace employeeDailyTaskRecorder.Migrations
                     b.Property<int>("EmpType")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasMaxLength(6)
-                        .HasColumnType("nvarchar(6)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfileImg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
                     b.ToTable("Employees");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Address = "Kathmandu",
-                            Email = "admin@gmail.com",
-                            EmpType = 1,
-                            Name = "Purna",
-                            Password = "admin"
-                        });
                 });
 
             modelBuilder.Entity("employeeDailyTaskRecorder.Models.Record", b =>

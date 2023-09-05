@@ -33,7 +33,10 @@ namespace employeeDailyTaskRecorder.Controllers
                 }
             }
             Result.EmployeeID = _ActiveUser.Id;
+            Result.EmployeeName = _ActiveUser.Name;
+            Result.EmployeeEmail = _ActiveUser.Email;
             Result.TaskList = _db.Records.Where(x => x.EmployeeId == _ActiveUser.Id).ToList();
+            Result.EmployeeList = _db.Employees.Where(x => x.Id == _ActiveUser.Id).ToList();
             return View(Result);
         }
         public IActionResult addTask(Record record)
@@ -59,6 +62,18 @@ namespace employeeDailyTaskRecorder.Controllers
             Employee empData = SessionService.GetSession(HttpContext);
             Record value = _db.Records.Find(record.Id);
             value.Task = record.Task;
+            _db.SaveChanges();
+            if (empData.IsAdmin)
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+            return RedirectToAction("EmployeeTask");
+        }
+        public IActionResult deleteTask(int taskId)
+        {
+            Employee empData = SessionService.GetSession(HttpContext);
+            Record data = _db.Records.Find(taskId);
+            _db.Records.Remove(data);
             _db.SaveChanges();
             if (empData.IsAdmin)
             {

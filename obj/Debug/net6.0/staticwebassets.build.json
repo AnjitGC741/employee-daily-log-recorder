@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2Jl/DHLyx7V51cj8yHB669gPrP1NZKJEqtrArN88LwY=",
+  "Hash": "Es0XA0zbvGoNJRtiXoho4DsAl2pLMQbYMKx5lemW9xs=",
   "Source": "employeeDailyTaskRecorder",
   "BasePath": "_content/employeeDailyTaskRecorder",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "employeeDailyTaskRecorder\\wwwroot",
       "Source": "employeeDailyTaskRecorder",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Debug\\net6.0\\scopedcss\\bundle\\employeeDailyTaskRecorder.styles.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Debug\\net6.0\\scopedcss\\bundle\\employeeDailyTaskRecorder.styles.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "employeeDailyTaskRecorder.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Debug\\net6.0\\scopedcss\\bundle\\employeeDailyTaskRecorder.styles.css"
+      "OriginalItemSpec": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Debug\\net6.0\\scopedcss\\bundle\\employeeDailyTaskRecorder.styles.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\employeeDailyTaskRecorder.bundle.scp.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\employeeDailyTaskRecorder.bundle.scp.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "employeeDailyTaskRecorder.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\employeeDailyTaskRecorder.bundle.scp.css"
+      "OriginalItemSpec": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\employeeDailyTaskRecorder.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\css\\site.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\css\\site.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\favicon.ico",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\favicon.ico",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -85,10 +85,78 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\employee.png",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\ant.png",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/ant.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\ant.png"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\background.jpg",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/background.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\background.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\background2.jpg",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/background2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\background2.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\background3.jpg",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/background3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\background3.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\employee.png",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "Img/employee.png",
       "AssetKind": "All",
@@ -102,10 +170,163 @@
       "OriginalItemSpec": "wwwroot\\Img\\employee.png"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\js\\site.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\logo.png",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\logo.png"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\nullImage.jpg",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/nullImage.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\nullImage.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\Upload\\1ad3a666-e529-46ba-8304-355b1420ff44.jpg",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/Upload/1ad3a666-e529-46ba-8304-355b1420ff44.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Upload\\1ad3a666-e529-46ba-8304-355b1420ff44.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\Upload\\60fc6d4e-fb0f-42f5-b56a-4295a6e79b12.jpg",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/Upload/60fc6d4e-fb0f-42f5-b56a-4295a6e79b12.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Upload\\60fc6d4e-fb0f-42f5-b56a-4295a6e79b12.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\Upload\\76020f49-2300-4675-8277-8a35b7177533.jpg",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/Upload/76020f49-2300-4675-8277-8a35b7177533.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Upload\\76020f49-2300-4675-8277-8a35b7177533.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\Upload\\91d35abb-272c-479b-a43c-ef6f3f84f65b.jpg",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/Upload/91d35abb-272c-479b-a43c-ef6f3f84f65b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Upload\\91d35abb-272c-479b-a43c-ef6f3f84f65b.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\Upload\\c5afe713-c627-4f09-811a-71fff93ee501.jpg",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/Upload/c5afe713-c627-4f09-811a-71fff93ee501.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Upload\\c5afe713-c627-4f09-811a-71fff93ee501.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\Upload\\d659dc7b-28f1-4b5d-830a-c2c24993433a.jpg",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/Upload/d659dc7b-28f1-4b5d-830a-c2c24993433a.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Upload\\d659dc7b-28f1-4b5d-830a-c2c24993433a.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\Upload\\f0e927ac-0ee0-40d7-8470-ed56f3d273dc.jpg",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/Upload/f0e927ac-0ee0-40d7-8470-ed56f3d273dc.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Upload\\f0e927ac-0ee0-40d7-8470-ed56f3d273dc.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\js\\site.js",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -119,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -136,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -153,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -170,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -187,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -204,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -221,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -238,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -255,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -272,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -289,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -306,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -323,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -340,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -357,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -374,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -391,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -408,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -425,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -442,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -459,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -476,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -493,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -510,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -527,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -544,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -561,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -578,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -595,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -612,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -629,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -646,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -663,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -680,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -697,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -714,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -731,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -748,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -765,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -782,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -799,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -816,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -833,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -850,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -867,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -884,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -901,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -918,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -935,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -952,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -969,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -986,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1003,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1020,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1037,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1054,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1071,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\DELL\\source\\repos\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
       "BasePath": "_content/employeeDailyTaskRecorder",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1086,6 +1307,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\tenant\\ANTS\\images\\logo.png",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "tenant/ANTS/images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\tenant\\ANTS\\images\\logo.png"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\tenant\\SmartDoc\\images\\logo2.png",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "tenant/SmartDoc/images/logo2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\tenant\\SmartDoc\\images\\logo2.png"
     }
   ]
 }

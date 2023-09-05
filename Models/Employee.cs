@@ -16,10 +16,14 @@ namespace employeeDailyTaskRecorder.Models
         [Required]
         public string Address { get; set; }
         [Required]
-        [MinLength(3)]
-        [MaxLength(6)]
+        [MinLength(5)]
         public string Password { get; set; }
         public EnumEmployeeType EmpType { get; set; }
+        public bool IsDeleted { get; set; } = false;
+        public bool Status { get; set; } = true;
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+        public string ProfileImg { get; set; }
         public ICollection<Record> Records { get; set; }
         [NotMapped]
         public bool IsAdmin => EmpType == EnumEmployeeType.Admin;
@@ -37,14 +41,17 @@ namespace employeeDailyTaskRecorder.Models
         public DateTime FromDate { get; set; }
         public DateTime ToDate { get; set; }
         public int? EmployeeID { get; set; }
+        public string? EmployeeName { get; set; }
+        public string? EmployeeEmail { get; set; }
         public string SearchTerm { get; set; }
         public string strToDate => ToDate.ToString("yyyy/MM/dd");
         public string strFromDate => FromDate.ToString("yyyy/MM/dd");
         public IList<Record> TaskList { get; set; } = new List<Record>();
-        public IList<Employee> EmployeeList { get; set; } = new List<Employee>();
+        public IList<Employee> EmployeeList
+        { get; set; } = new List<Employee>();
         public VMAdminIndex()
         {
-            FromDate = DateTime.Now;
+            FromDate = DateTime.Now.AddMonths(-1);
             ToDate = DateTime.Now;
         }
     }

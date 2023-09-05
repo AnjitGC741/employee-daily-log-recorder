@@ -15,6 +15,11 @@ namespace employeeDailyTaskRecorder.HelperService
         {
             return httpContext.Session.Get<Employee>(SessionKeyName);
         }
+        internal static Employee ClearSession(HttpContext httpContext)
+        {
+             httpContext.Session.Clear();
+            return null;
+        }
     }
     public static class SessionExtensions
     {

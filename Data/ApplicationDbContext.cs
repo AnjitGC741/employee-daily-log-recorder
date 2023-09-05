@@ -16,10 +16,6 @@ namespace employeeDailyTaskRecorder.Data
                 .HasMany(a => a.Records)
                 .WithOne(b => b.Employee)
                 .HasForeignKey(b => b.EmployeeId);
-
-            modelBuilder.Entity<Employee>().HasData(
-               new Employee { Id = 1, Name = "Purna", Email = "admin@gmail.com", Address = "Kathmandu", Password = "admin", EmpType = EnumEmployeeType.Admin }
-               );
         }
       
     }

@@ -3,6 +3,8 @@ using employeeDailyTaskRecorder.Data;
 using employeeDailyTaskRecorder.Models;
 using Microsoft.EntityFrameworkCore;
 using employeeDailyTaskRecorder.HelperService;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace employeeDailyTaskRecorder.Controllers
 {
@@ -24,20 +26,20 @@ namespace employeeDailyTaskRecorder.Controllers
         {
             if (password != null && email != null)
             {
-                Employee EmpData = _db.Employees.FirstOrDefault(x => x.Email == email);
+                Employee EmpData = _db.Employees.FirstOrDefault(x => x.Email == email && x.IsDeleted == false);
                 if (EmpData == null)
                 {
-             
+
                     TempData["ErrorMessage"] = "Incorrect Email";
                     return RedirectToAction("Index", "Auth");
                 }
                 var passwordValue = EmpData.Password;
-                if (passwordValue != password)
+                if (passwordValue != HashPassword(password))
                 {
                     TempData["ErrorMessage"] = "Incorrect password.";
                     return RedirectToAction("Index", "Auth");
                 }
-               SessionService.SetSession(EmpData, HttpContext);
+                SessionService.SetSession(EmpData, HttpContext);
 
                 if (EmpData.IsAdmin)
                 {
@@ -52,9 +54,26 @@ namespace employeeDailyTaskRecorder.Controllers
         }
         public IActionResult Logout()
         {
-            Employee EmpData = null;
-            SessionService.SetSession(EmpData, HttpContext);
+            SessionService.ClearSession( HttpContext);
             return RedirectToAction("Index", "Auth");
         }
+        //hashing the password
+        public string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+                byte[] hashBytes = sha256.ComputeHash(bytes);
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in hashBytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+
+                return builder.ToString();
+            }
+        }
+
+
     }
 }

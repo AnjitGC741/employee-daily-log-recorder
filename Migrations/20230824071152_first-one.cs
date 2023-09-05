@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace employeeDailyTaskRecorder.Migrations
 {
     /// <inheritdoc />
-    public partial class first : Migration
+    public partial class firstone : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,8 +20,12 @@ namespace employeeDailyTaskRecorder.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(6)", maxLength: 6, nullable: false),
-                    EmpType = table.Column<int>(type: "int", nullable: false)
+                    Password = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    EmpType = table.Column<int>(type: "int", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false),
+                    Status = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -49,11 +53,6 @@ namespace employeeDailyTaskRecorder.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.InsertData(
-                table: "Employees",
-                columns: new[] { "Id", "Address", "Email", "EmpType", "Name", "Password" },
-                values: new object[] { 1, "Kathmandu", "admin@gmail.com", 1, "Purna", "admin" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Records_EmployeeId",

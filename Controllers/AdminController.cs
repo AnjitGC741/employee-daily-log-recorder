@@ -4,10 +4,12 @@ using employeeDailyTaskRecorder.Models;
 using Microsoft.EntityFrameworkCore;
 using employeeDailyTaskRecorder.HelperService;
 using employeeDailyTaskRecorder.CustomAttributes;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace employeeDailyTaskRecorder.Controllers
 {
-    [GeneralAuthorization]
+    //[GeneralAuthorization]
+    [AdminAuthorization]
     public class AdminController : Controller
     {
         private readonly ApplicationDbContext _db;
@@ -18,33 +20,16 @@ namespace employeeDailyTaskRecorder.Controllers
           
 
         }
+        [HttpGet]
+        [HttpPost]
         //attributes so that only admin can access this page
-        public async Task<IActionResult> Index()
-        {
-            VMAdminIndex Result = new VMAdminIndex();
-            DateTime currentDateTime = DateTime.Now;
-            string formattedDate = currentDateTime.ToString("MM/dd/yyyy");
-            List<Record> records = _db.Records.Where(x => x.EmployeeId == _ActiveUser.Id).ToList();
-            Result.CanAddTask = true;
-            foreach(var data in records)
-            {
-                if((data.TaskPerformedDate.ToString("MM/dd/yyyy")).ToString() == formattedDate)
-                {
-                    Result.CanAddTask = false;
-                    break;
-                }
-            }
-            Result.EmployeeID = _ActiveUser.Id;
-            Result.EmployeeList = _db.Employees.ToList();
-            Result.TaskList = await _db.Records.ToListAsync();
-            return View(Result);
-        }
-        public async Task<IActionResult> filterData(VMAdminIndex? SearchData)
+        public async Task<IActionResult> Index(VMAdminIndex? SearchData)
         {
             VMAdminIndex Result = SearchData == null ? new VMAdminIndex() : SearchData;
+            DateTime currentDateTime = DateTime.Now;
+            string formattedDate = currentDateTime.ToString("MM/dd/yyyy");
             IQueryable<Record> recordList = _db.Records
-                .Include(x => x.Employee)
-                .Where(x => x.TaskPerformedDate.Date >= Result.FromDate && x.TaskPerformedDate <= Result.ToDate);
+             .Include(x => x.Employee).Where(x => x.TaskPerformedDate >= Result.FromDate && x.TaskPerformedDate <= Result.ToDate);
             if (SearchData.EmployeeID.HasValue)
             {
                 recordList = recordList.Where(x => x.EmployeeId == SearchData.EmployeeID.Value);
@@ -53,9 +38,22 @@ namespace employeeDailyTaskRecorder.Controllers
             {
                 recordList = recordList.Where(x => x.Task.Contains(SearchData.SearchTerm));
             }
+            List<Record> records = _db.Records.Where(x => x.EmployeeId == _ActiveUser.Id).ToList();
+            Result.CanAddTask = true;
+            foreach (var data in records)
+            {
+                if ((data.TaskPerformedDate.ToString("MM/dd/yyyy")).ToString() == formattedDate)
+                {
+                    Result.CanAddTask = false;
+                    break;
+                }
+            }
+            ViewBag.EmployeeList = new SelectList(_db.Employees.ToList(), "Id", "Name");
+            TempData["activeUser"] = _ActiveUser.Id;
+            TempData["activeUserName"] = SearchData.EmployeeName;
             Result.EmployeeList = _db.Employees.ToList();
             Result.TaskList = await recordList.ToListAsync();
-            return View("Index", Result);
+            return View(Result);
         }
         public IActionResult employeeList()
         {
