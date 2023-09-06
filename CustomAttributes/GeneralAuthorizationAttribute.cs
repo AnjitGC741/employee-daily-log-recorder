@@ -25,7 +25,20 @@ namespace employeeDailyTaskRecorder.CustomAttributes
         {
             base.OnAuthorization(context);
             var user = SessionService.GetSession(context.HttpContext);
-            if (user!=null && user.IsUser)
+            if ((user!=null && user.IsUser))
+            {
+                context.Result = new RedirectResult("/ErrorHandling/Index");
+                return;
+            }
+        
+        } 
+    }
+    public class UserAuthorizationAttribute: Attribute, IAuthorizationFilter
+    {
+        public new void OnAuthorization(AuthorizationFilterContext context)
+        {
+            var user = SessionService.GetSession(context.HttpContext);
+            if(user!=null && user.IsAdmin)
             {
                 context.Result = new RedirectResult("/ErrorHandling/Index");
                 return;

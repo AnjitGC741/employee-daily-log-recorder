@@ -9,6 +9,7 @@
       "employeeDailyTaskRecorder/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
+          "HtmlAgilityPack": "1.11.52",
           "Microsoft.EntityFrameworkCore": "7.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.10"
@@ -56,6 +57,14 @@
           "lib/net6.0/BCrypt.Net-Next.dll": {
             "assemblyVersion": "4.0.3.0",
             "fileVersion": "4.0.3.0"
+          }
+        }
+      },
+      "HtmlAgilityPack/1.11.52": {
+        "runtime": {
+          "lib/netstandard2.0/HtmlAgilityPack.dll": {
+            "assemblyVersion": "1.11.52.0",
+            "fileVersion": "1.11.52.0"
           }
         }
       },
@@ -704,6 +713,13 @@
       "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
       "path": "bcrypt.net-next/4.0.3",
       "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
+    },
+    "HtmlAgilityPack/1.11.52": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qfJzz0eEgoO5O6uA1PpH4wmU4yz64PKnDolAW41vTlCfRyPlAyZIJANg+QYmQgxiWg/cLUAkcLNMpB7CCV66ZQ==",
+      "path": "htmlagilitypack/1.11.52",
+      "hashPath": "htmlagilitypack.1.11.52.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

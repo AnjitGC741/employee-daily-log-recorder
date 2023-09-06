@@ -29,7 +29,7 @@ namespace employeeDailyTaskRecorder.Controllers
             DateTime currentDateTime = DateTime.Now;
             string formattedDate = currentDateTime.ToString("MM/dd/yyyy");
             IQueryable<Record> recordList = _db.Records
-             .Include(x => x.Employee).Where(x => x.TaskPerformedDate >= Result.FromDate && x.TaskPerformedDate <= Result.ToDate);
+             .Include(x => x.Employee).Where(x => x.TaskPerformedDate.Date >= Result.FromDate.Date && x.TaskPerformedDate.Date <= Result.ToDate.Date);
             if (SearchData.EmployeeID.HasValue)
             {
                 recordList = recordList.Where(x => x.EmployeeId == SearchData.EmployeeID.Value);
@@ -52,7 +52,7 @@ namespace employeeDailyTaskRecorder.Controllers
             TempData["activeUser"] = _ActiveUser.Id;
             TempData["activeUserName"] = SearchData.EmployeeName;
             Result.EmployeeList = _db.Employees.ToList();
-            Result.TaskList = await recordList.ToListAsync();
+            Result.TaskList = await recordList.OrderByDescending(x => x.TaskPerformedDate).ToListAsync();
             return View(Result);
         }
         public IActionResult employeeList()

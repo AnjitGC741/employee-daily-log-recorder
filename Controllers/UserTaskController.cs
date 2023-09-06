@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using employeeDailyTaskRecorder.Data;
 using employeeDailyTaskRecorder.Models;
+using Microsoft.EntityFrameworkCore;
 using employeeDailyTaskRecorder.HelperService;
 using employeeDailyTaskRecorder.CustomAttributes;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace employeeDailyTaskRecorder.Controllers
 {
@@ -17,6 +20,7 @@ namespace employeeDailyTaskRecorder.Controllers
             _db = db;
 
         }
+        [UserAuthorization]
         public IActionResult EmployeeTask()
         {
             VMAdminIndex Result = new VMAdminIndex();
@@ -41,7 +45,7 @@ namespace employeeDailyTaskRecorder.Controllers
         }
         public IActionResult addTask(Record record)
         {
-            //Employee empData = SessionService.GetSession(HttpContext);
+            
             var ip = HttpContext.Connection.RemoteIpAddress?.ToString();
             DateTime currentDateTime = DateTime.Now;
             Record value = new Record();
@@ -80,6 +84,7 @@ namespace employeeDailyTaskRecorder.Controllers
                 return RedirectToAction("Index", "Admin");
             }
             return RedirectToAction("EmployeeTask");
+          
         }
     }
 }

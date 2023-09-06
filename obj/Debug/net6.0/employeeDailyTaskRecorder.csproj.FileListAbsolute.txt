@@ -163,3 +163,4 @@ D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0\employeeDailyTaskRecorder.pdb
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0\employeeDailyTaskRecorder.genruntimeconfig.cache
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0\ref\employeeDailyTaskRecorder.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Debug\net6.0\HtmlAgilityPack.dll

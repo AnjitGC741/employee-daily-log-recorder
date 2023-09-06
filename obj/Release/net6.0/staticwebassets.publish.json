@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "M/NuaoHl5qGq41FGpCwm7wnh3EqXBreJKS+JXgRR0Kk=",
+  "Hash": "zUqGG5xH7UWDk/Y9XKi0NAkVos/cgGM6tAaT7Yt4w9A=",
   "Source": "employeeDailyTaskRecorder",
   "BasePath": "_content/employeeDailyTaskRecorder",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\css\\Toast.css",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "css/Toast.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Toast.css"
     },
     {
       "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\favicon.ico",
@@ -321,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Img\\Upload\\f0e927ac-0ee0-40d7-8470-ed56f3d273dc.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\Img\\Upload\\f4cb245a-cbfc-4f35-9435-1d9fdee9686c.jpg",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "Img/Upload/f4cb245a-cbfc-4f35-9435-1d9fdee9686c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Upload\\f4cb245a-cbfc-4f35-9435-1d9fdee9686c.jpg"
     },
     {
       "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\js\\site.js",

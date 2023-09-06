@@ -23,7 +23,7 @@ namespace employeeDailyTaskRecorder.Models
         public bool Status { get; set; } = true;
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
-        public string ProfileImg { get; set; }
+        public string ProfileImg { get; set; } = String.Empty;
         public ICollection<Record> Records { get; set; }
         [NotMapped]
         public bool IsAdmin => EmpType == EnumEmployeeType.Admin;

@@ -3,13 +3,15 @@ using employeeDailyTaskRecorder.Data;
 using employeeDailyTaskRecorder.Models;
 using Microsoft.EntityFrameworkCore;
 using employeeDailyTaskRecorder.HelperService;
-using System.Security.Cryptography;
-using System.Text;
+using employeeDailyTaskRecorder.Hash;
+
+
 
 namespace employeeDailyTaskRecorder.Controllers
 {
     public class AuthController : Controller
     {
+
         private readonly ApplicationDbContext _db;
         private readonly IHttpContextAccessor contxt;
         public AuthController(ApplicationDbContext db)
@@ -34,7 +36,9 @@ namespace employeeDailyTaskRecorder.Controllers
                     return RedirectToAction("Index", "Auth");
                 }
                 var passwordValue = EmpData.Password;
-                if (passwordValue != HashPassword(password))
+              //  string hashedPassword = new Password(password).HashPassword();
+              Password hashedPassword  =  new Password(password);
+                if (passwordValue != hashedPassword.HashPassword())
                 {
                     TempData["ErrorMessage"] = "Incorrect password.";
                     return RedirectToAction("Index", "Auth");
@@ -57,23 +61,5 @@ namespace employeeDailyTaskRecorder.Controllers
             SessionService.ClearSession( HttpContext);
             return RedirectToAction("Index", "Auth");
         }
-        //hashing the password
-        public string HashPassword(string password)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = Encoding.UTF8.GetBytes(password);
-                byte[] hashBytes = sha256.ComputeHash(bytes);
-                StringBuilder builder = new StringBuilder();
-                foreach (byte b in hashBytes)
-                {
-                    builder.Append(b.ToString("x2"));
-                }
-
-                return builder.ToString();
-            }
-        }
-
-
     }
 }

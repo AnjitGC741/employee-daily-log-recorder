@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <style>
         .custom-badge {
             font-size: 16px;
@@ -26,7 +27,6 @@
         .badge-danger {
             background-color: #F8D7DA;
         }
-
         .error {
             color: red;
         }
@@ -35,7 +35,7 @@
 <body>
     <div style="height: 100vh; background-color: rgba(0, 0, 0, 0.7);z-index:99" class="position-fixed w-100 d-none" id="blurBox">
         <div class="position-relative d-flex h-100 w-100 justify-content-center align-items-center">
-            <div id="addDataFormBox" class="position-absolute d-none p-4 bg-white w-25 rounded">
+            <div id="addDataFormBox" class="position-absolute d-none p-4 bg-white w-50 rounded">
                 <div class="d-flex justify-content-end">
                     <button id="closeAddPopUpBtn" class="btn btn-danger">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -43,11 +43,13 @@
                         </svg>
                     </button>
                 </div>
+                <p class="text-secondary fs-5">Today's Task</p>
                 <form id="addTaskForm" method="post" class="w-100">
-                    <label class="form-label">Task</label>
-                    <textarea class="form-control" id="taskInputField" name="Task" rows="3"></textarea>
+                    <textarea class="form-control" id="summernote" name="Task" rows="3"></textarea>
                     <p class="text-danger" id="emptyAddTaskInputFiled"></p>
-                    <button id="addTodayTask" class="btn btn-success mt-3 w-100">Add</button>
+                    <div class="d-flex justify-content-end">
+                        <button id="addTodayTask" class="btn btn-success mt-3 w-25">Add</button>
+                    </div>
                 </form>
             </div>
             <div id="addUserDataFormBox" class="position-absolute d-none p-4 bg-white w-25 rounded">
@@ -96,7 +98,7 @@
             </div>
             @foreach (var data in Model.TaskList)
             {
-                <div id="editAdminTaskBox_@data.Id" class="position-absolute d-none p-4 bg-white w-25 rounded">
+                <div id="editAdminTaskBox_@data.Id" class="position-absolute d-none p-4 bg-white w-50 rounded">
                     <div class="d-flex justify-content-end">
                         <button id="editAdminTaskBox_@data.Id" onclick="hideAdminEdit(this.id);" class="btn btn-danger">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -104,46 +106,19 @@
                             </svg>
                         </button>
                     </div>
+                    <p class="text-secondary fs-5">Update Today's Task</p>
                     <form asp-controller="UserTask" asp-action="editTask" method="post">
                         <input type="hidden" value="Admin" name="Type" />
                         <input hidden name="Id" value=@(data.Id) />
                         <label class="form-label">Task</label>
-                        <textarea class="form-control" name="Task" rows="3">@(data.Task)</textarea>
-                        <button type="submit" class="btn btn-warning mt-3 w-100">Update</button>
+                        <textarea class="form-control" id="summernoteedit_@data.Id" name="Task" rows="3">@Html.Raw(data.Task)</textarea>
+                        <div class="d-flex justify-content-end">
+
+                            <button type="submit" class="btn btn-warning mt-3 w-25">Update</button>
+                        </div>
                     </form>
                 </div>
             }
-   @*         @foreach (var data in Model.EmployeeList)
-            {
-                <div id="editUserDataFormBox_@data.Id" class="position-absolute d-none p-4 bg-white w-25 rounded">
-                    <div class="d-flex justify-content-end">
-                        <button id="editUserDataFormBox_@data.Id" onclick="hideEditUserDataFormBox(this.id);" class="btn btn-danger">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                            </svg>
-                        </button>
-                    </div>
-                    <form id="updateUserForm_@data.Id" method="post" class="w-100">
-                        <input hidden name="Id" value=@(data.Id) />
-                        <label>Name</label>
-                        <input type="text" name="Name" class="form-control mb-3" placeholder="Enter Employee name" value=@(data.Name) />
-                        <label>Email</label>
-                        <input type="text" name="Email" class="form-control mb-3" placeholder="Enter Employee email" value=@(data.Email) />
-                        <label>Address</label>
-                        <input type="text" name="Address" class="form-control mb-3" placeholder="Enter Employee Address " value=@(data.Address) />
-                        <label>Role</label>
-                        <select name="EmpType" class="form-control mb-3">
-                            <option value=@(data.EmpType)>@(data.EmpType)</option>
-                            <option value="1">Admin</option>
-                            <option value="2">Employee</option>
-                        </select>
-                        <label>Password</label>
-                        <input type="text" value=@(data.Password) id="updateDataPassword" name="Password" class="form-control" placeholder="Enter Password " />
-                        <span class="text-danger" id="passwordEmptyMsg"></span>
-                        <button onclick="validatePassword(@(data.Id));" class="btn btn-warning mt-3 w-100">Update</button>
-                    </form>
-                </div>
-            }*@
         </div>
     </div>
     <div class="container mb-4">
@@ -174,6 +149,7 @@
     <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

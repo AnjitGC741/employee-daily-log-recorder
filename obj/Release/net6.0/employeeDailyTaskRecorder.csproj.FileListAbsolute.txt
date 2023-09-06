@@ -163,3 +163,4 @@ D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\employeeDailyTaskRecorder.genruntimeconfig.cache
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\ref\employeeDailyTaskRecorder.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\BCrypt.Net-Next.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\HtmlAgilityPack.dll

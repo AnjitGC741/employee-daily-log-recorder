@@ -9,6 +9,7 @@
             isPresent = 1;
         }
     }
+    string[] colors = { "#352f44", "#512b81", "#cd1818", "#810ca8", "#1e5128","#d89216","#200f21" };
 }
 <div class="container">
     <h1 class="text-center mb-3">User List</h1>
@@ -29,30 +30,47 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Address</th>
-                <th>Status</th>
+                @*     <th>Status</th>*@
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var employee in Model.EmployeeList)
             {
+                     Random random = new Random();
+        int randomNumber = random.Next(0, 5);
                 <tr>
                     <td>@(sn++)</td>
                     <td>
-                        @(employee.Name)
+                        <div class="d-flex" style="align-items:center;gap:10px;">
+                            <div class="rounded-circle d-flex justify-content-center"   style="background-color:@colors[randomNumber];width:50px;height:50px;overflow:hidden;align-items:center;">
+                                @if (employee.ProfileImg.ToString() != "")
+                                {
+                                    <img class="w-100 h-100" src=@(employee.ProfileImg) alt="" style="object-fit:cover">
+                                }
+                                else
+                                {
+                                    <h3  class="text-white mt-2">@(char.ToUpper(employee.Name[0]))</h3>
+                                }
+                            </div>
+                            <p class="mt-2 fw-bold">@(employee.Name)</p>
+                        </div>
+                        <script>
+                             
+                        </script>
                     </td>
                     <td>@(employee.Email)</td>
                     <td>@(employee.Address)</td>
-                    <td>
+                    @*   <td>
                         @if (employee.Status)
                         {
-                            <p class="custom-badge badge-success">Active</p>
+                        <p class="custom-badge badge-success">Active</p>
                         }
                         else
                         {
-                            <p class="custom-badge badge-danger">InActive</p>
+                        <p class="custom-badge badge-danger">InActive</p>
                         }
-                    </td>
+                        </td>*@
                     <td>
                         <div class="d-flex" style="gap:10px">
                             <a asp-controller="User" asp-action="EmployeeEditProfile" asp-route-id=@(employee.Id) style="color:black;text-decoration:none">

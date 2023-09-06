@@ -1,4 +1,4 @@
-﻿@model VMAdminIndex
+﻿
 @{
     int sn = 1;
     DateTime currentDateTime = DateTime.Now;
@@ -38,7 +38,6 @@
         <table id="myTable" class="table mt-4 table-stripped table-bordered">
             <thead class="table-dark">
                 <tr>
-
                     <th>SN</th>
                     <th>Task</th>
                     <th>Name</th>
@@ -52,7 +51,7 @@
                 {
                     <tr>
                         <td>@(sn++)</td>
-                        <td>@(task.Task)</td>
+                        <td>@Html.Raw(task.Task)</td>
                         <td>@(task.Employee.Name)</td>
                         <td>@(task.TaskPerformedDate)</td>
                         <td>@(task.Ipaddress)</td>
@@ -89,7 +88,21 @@
 
 @section Scripts{
 <script>
+   
      $(document).ready(function () {
+            $('#summernote').summernote({
+        placeholder: 'Enter your task',
+        tabsize: 2,
+        height: 200,
+          toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'clear']],
+            ['para', ['ul']],
+            ['view', ['codeview']],
+        ]
+       
+      });
+     
         $("#closeAddPopUpBtn").on("click", () => {
             $("#blurBox").addClass("d-none");
             $("#addDataFormBox").addClass("d-none");
@@ -102,33 +115,36 @@
 
         $("#addTodayTask").on("click",()=>{
      event.preventDefault();
-    var taskValue = $("#taskInputField").val();
-    if(taskValue === ""){
-        $("#taskInputField").addClass("is-invalid");
-        $("#emptyAddTaskInputFiled").text("Task field cannot be empty")
-        return false;
-    }
-    const form = document.getElementById("addTaskForm");
+      var value = $("#summernote").val();
+      if(value === ""){
+          $("#emptyAddTaskInputFiled").text("Task is empty")
+          return false;
+      }
+      else{
+          const form = document.getElementById("addTaskForm");
     const formAction = "@Url.Action("addTask", "UserTask")";
     form.action = formAction;
     form.submit();
+      }
+  
     })
-         $("#taskInputField").on("keypress",(event)=>{
-                  if($("#taskInputField").hasClass("is-invalid")){
-                    if(event.val !== ""){
-                      $("#emptyAddTaskInputFiled").html("");
-                      $("#taskInputField").removeClass("is-invalid");
-                    }
-                  }
-                })
-
-
         $('#myTable').DataTable();
     });
 
      function showAdminEditBox(x) {
               $("#blurBox").removeClass("d-none");
             $("#editAdminTaskBox_" + x).removeClass("d-none");
+                           $('#summernoteedit_'+x).summernote({
+        placeholder: 'Enter your task',
+        tabsize: 2,
+        height: 200,
+          toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'clear']],
+            ['para', ['ul']],
+            ['view', ['codeview']],
+        ]
+      });
         }
 
         function hideAdminEdit(x) {
