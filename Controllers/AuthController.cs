@@ -4,14 +4,10 @@ using employeeDailyTaskRecorder.Models;
 using Microsoft.EntityFrameworkCore;
 using employeeDailyTaskRecorder.HelperService;
 using employeeDailyTaskRecorder.Hash;
-
-
-
 namespace employeeDailyTaskRecorder.Controllers
 {
     public class AuthController : Controller
     {
-
         private readonly ApplicationDbContext _db;
         private readonly IHttpContextAccessor contxt;
         public AuthController(ApplicationDbContext db)

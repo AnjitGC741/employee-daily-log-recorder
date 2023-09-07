@@ -50,7 +50,7 @@
                 {
                 <tr>
                     <td>@(sn++)</td>
-                    <td>@(task.Task)</td>
+                    <td>@Html.Raw(task.Task)</td>
                     <td>@(task.TaskPerformedDate)</td>
                 </tr>
                 }

@@ -136,17 +136,19 @@ namespace employeeDailyTaskRecorder.Controllers
                         TempData["editSuccessfulMessage"] = "Password must be atleast 5 character";
                         return RedirectToAction("EmployeeEditProfile", "User", new { id = value.Id });
                     }
-
-                    value.Password = new Password(employee.Password).HashPassword();
+                    if (value.Password != employee.Password)
+                    {
+                        value.Password = new Password(employee.Password).HashPassword();
+                    }
                 }
                 TempData["type"] = "success";
                 TempData["editSuccessfulMessage"] = "Profile Update Successful";
             }
             else
             {
-                string oldPasswordValueHash = new Password(oldPassword).HashPassword();
               
-                if (confirmPassword == "" || oldPassword == "" || newPassword == "")
+              
+                if (confirmPassword == null || oldPassword == null || newPassword == null)
                 {
                     TempData["PasswordErrorMessage"] = "Empty Fields";
                     flag = false;
@@ -163,7 +165,7 @@ namespace employeeDailyTaskRecorder.Controllers
                     TempData["PasswordErrorMessage"] = "Password must be atleast 5 character";
                     flag = false;
                 }
-                else if (employee.Password != oldPasswordValueHash)
+                else if (employee.Password != new Password(oldPassword).HashPassword())
                 {
                     TempData["PasswordErrorMessage"] = "Old password doesn't match";
                     flag = false;
