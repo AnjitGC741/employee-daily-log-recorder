@@ -1,4 +1,4 @@
-﻿
+﻿@model employeeDailyTaskRecorder.Models.VMAdminIndex
 @{
     int sn = 1;
     DateTime currentDateTime = DateTime.Now;
@@ -6,6 +6,29 @@
 }
 <div class="container">
     <h1 class="text-center mb-3">Task List</h1>
+        <div class="d-flex justify-content-end w-100 mb-4" style="gap:10px;">
+        <button class="btn btn-light">
+             Today's Date :   @(formattedDate)
+        </button>
+        @if (Model.CanAddTask)
+        {
+            <button id="showAddPopupBox" class="btn btn-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                </svg>
+                Add Task
+            </button>
+        }
+        <a asp-controller="Admin" asp-action="SendEmail" class="text-decoration-none;" style="color:white;">
+        <button class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+            </svg>
+            Send Email
+        </button>
+         </a>
+
+    </div>
     <div class="d-flex justify-content-end w-100 mb-4">
         <div class="w-100">
             <form class="w-100 d-flex align-items-center" style="gap:5px" asp-controller="Admin" asp-action="index" method="post">
@@ -13,9 +36,9 @@
                 <input type="date" name="FromDate" value="@Model.strFromDate" class="form-control" />
                 <label>To</label>
                 <input type="date" name="ToDate" value="@Model.strToDate" class="form-control" />
-                
-                @Html.DropDownList("EmployeeId", ViewBag.EmployeeList, "Select Employee", new { @class = "form-control" })
-                
+
+                @Html.DropDownList("EmployeeId", ViewBag.EmployeeList, "Select Employee", new { @class = "form-control", @id = "employeeList"})
+
                 <div class="d-flex w-100" style="gap:5px">
                     <input class="form-control mr-sm-2 w-100" type="text" placeholder="Search by Task" name="SearchTerm">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -23,17 +46,8 @@
             </form>
         </div>
     </div>
-    @if (Model.CanAddTask)
-    {
-        <div class="d-flex justify-content-end w-100 mb-4">
-            <button id="showAddPopupBox" class="btn btn-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
-                </svg>
-                Add Task
-            </button>
-        </div>
-    }
+
+
     <div>
         <table id="myTable" class="table mt-4 table-stripped table-bordered">
             <thead class="table-dark">
@@ -52,7 +66,7 @@
                     <tr>
                         <td>@(sn++)</td>
                         <td>@Html.Raw(task.Task)</td>
-                        <td>@(task.Employee.Name)</td>
+                        <td>  <a asp-controller="User" asp-action="UserDetails" asp-route-id="@(task.EmployeeId)" class="text-decoration-none" style="color:black;">@(task.Employee.Name)</a></td>
                         <td>@(task.TaskPerformedDate)</td>
                         <td>@(task.Ipaddress)</td>
                         <td>
@@ -69,9 +83,9 @@
                                         </button>
                                     }
                                     <button class="btn btn-warning" id=@(task.Id) onclick="showAdminEditBox(this.id);">
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                    <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                                </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                            <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                                        </svg>
                                     </button>
                                 </div>
 
@@ -88,8 +102,9 @@
 
 @section Scripts{
 <script>
-   
+
      $(document).ready(function () {
+           $('#employeeList').select2();
             $('#summernote').summernote({
         placeholder: 'Enter your task',
         tabsize: 2,
@@ -100,9 +115,9 @@
             ['para', ['ul']],
             ['view', ['codeview']],
         ]
-       
+
       });
-     
+
         $("#closeAddPopUpBtn").on("click", () => {
             $("#blurBox").addClass("d-none");
             $("#addDataFormBox").addClass("d-none");
@@ -126,7 +141,7 @@
     form.action = formAction;
     form.submit();
       }
-  
+
     })
         $('#myTable').DataTable();
     });

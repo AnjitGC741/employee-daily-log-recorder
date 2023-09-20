@@ -47,12 +47,25 @@ namespace employeeDailyTaskRecorder.Models
         public string strToDate => ToDate.ToString("yyyy/MM/dd");
         public string strFromDate => FromDate.ToString("yyyy/MM/dd");
         public IList<Record> TaskList { get; set; } = new List<Record>();
-        public IList<Employee> EmployeeList
-        { get; set; } = new List<Employee>();
+        public IList<Employee> EmployeeList { get; set; } = new List<Employee>();
         public VMAdminIndex()
         {
             FromDate = DateTime.Now.AddMonths(-1);
             ToDate = DateTime.Now;
         }
+    }
+    public class VMValidatePassword
+    {
+        public int EmployeeID { get; set; }
+        [Required]
+        [MinLength(5)]
+        public string OldPassword { get; set; }
+        [Required]
+        [MinLength(5)]
+        public string NewPassword { get; set; }
+        [Required]
+        [MinLength(5)]
+        public string ConfirmPassword { get; set; }
+        public IList<Employee> EmployeeList { get; set; } = new List<Employee>();
     }
 }

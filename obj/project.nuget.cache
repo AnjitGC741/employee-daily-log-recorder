@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "x/EFgdrdnTEjO6AkWSdshl92JUZKS0n4mGHM8NDGbyJqtvzThuq4Oz7n3xM0Do/fzdSWsIo0xEGM3QzC1y2ttw==",
+  "dgSpecHash": "bnBeG0lKGltFY7Eip76LbxrVbz7XFGPXDGTITsxMrHH2iNEtX/xznho1RPFw3votsAEw9p0u3KUdsz4UrQDHpA==",
   "success": true,
   "projectFilePath": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\hangfire.core\\1.8.5\\hangfire.core.1.8.5.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\htmlagilitypack\\1.11.52\\htmlagilitypack.1.11.52.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Mw8bvSCW6Hhx1F9CGClv1VxRg7FRyXa9r5JBfQVv6n0=",
+  "Hash": "qOk24u1gqQdwTggxiAxLkp3nxl6cu+AP8EEocrifwgY=",
   "Source": "employeeDailyTaskRecorder",
   "BasePath": "_content/employeeDailyTaskRecorder",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\employeeDailyTaskRecorder.bundle.scp.css"
     },
     {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\css\\LoginPage.css",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "css/LoginPage.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\LoginPage.css"
+    },
+    {
       "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\css\\site.css",
       "SourceId": "employeeDailyTaskRecorder",
       "SourceType": "Discovered",
@@ -66,23 +83,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\css\\Toast.css",
-      "SourceId": "employeeDailyTaskRecorder",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
-      "BasePath": "_content/employeeDailyTaskRecorder",
-      "RelativePath": "css/Toast.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Toast.css"
     },
     {
       "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\favicon.ico",
@@ -355,6 +355,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Img\\Upload\\f4cb245a-cbfc-4f35-9435-1d9fdee9686c.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\js\\LoginPage.js",
+      "SourceId": "employeeDailyTaskRecorder",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\",
+      "BasePath": "_content/employeeDailyTaskRecorder",
+      "RelativePath": "js/LoginPage.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\LoginPage.js"
     },
     {
       "Identity": "D:\\projects\\employeeDailyTaskRecorder\\employeeDailyTaskRecorder\\wwwroot\\js\\site.js",

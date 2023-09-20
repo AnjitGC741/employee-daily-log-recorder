@@ -32,9 +32,7 @@ namespace employeeDailyTaskRecorder.Controllers
                     return RedirectToAction("Index", "Auth");
                 }
                 var passwordValue = EmpData.Password;
-              //  string hashedPassword = new Password(password).HashPassword();
-              Password hashedPassword  =  new Password(password);
-                if (passwordValue != hashedPassword.HashPassword())
+                if (passwordValue != PwdEncryption.HashPassword(password))
                 {
                     TempData["ErrorMessage"] = "Incorrect password.";
                     return RedirectToAction("Index", "Auth");

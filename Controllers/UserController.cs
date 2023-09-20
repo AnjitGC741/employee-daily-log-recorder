@@ -7,10 +7,10 @@ using employeeDailyTaskRecorder.Hash;
 
 namespace employeeDailyTaskRecorder.Controllers
 {
-     [GeneralAuthorization]
+    [GeneralAuthorization]
     public class UserController : Controller
     {
-        private readonly ApplicationDbContext _db;
+        private readonly ApplicationDbContext _db;  
         private readonly IWebHostEnvironment _webHostEnvironment;
         public UserController(ApplicationDbContext db, IWebHostEnvironment webHostEnvironment)
         {
@@ -44,7 +44,7 @@ namespace employeeDailyTaskRecorder.Controllers
                 value.Name = employee.Name;
                 value.Address = employee.Address;
                 value.Email = employee.Email;
-                value.Password = new Password(employee.Password).HashPassword();
+                value.Password = PwdEncryption.HashPassword(employee.Password);
                 value.EmpType = employee.EmpType;
                 value.ProfileImg = "";
                 _db.Employees.Add(value);
@@ -78,12 +78,10 @@ namespace employeeDailyTaskRecorder.Controllers
         public IActionResult EmployeeEditProfile(int id)
         {
             Employee empData = SessionService.GetSession(HttpContext);
-            VMAdminIndex Result = new VMAdminIndex();
-            Result.EmployeeID = empData.Id;
-            Result.TaskList = _db.Records.Where(x => x.EmployeeId == id).ToList();
-            Result.EmployeeList = _db.Employees.Where(x => x.Id == id).ToList();
-            return View(Result);
-
+            VMValidatePassword UserData = new VMValidatePassword();
+             UserData.EmployeeID = empData.Id;
+            UserData.EmployeeList = _db.Employees.Where(x => x.Id == id).ToList();
+            return View(UserData);
         }
         public IActionResult editProfileImg(int Id, IFormFile? profileImg)
         {
@@ -118,74 +116,60 @@ namespace employeeDailyTaskRecorder.Controllers
             _db.SaveChanges();
             return RedirectToAction("EmployeeEditProfile", "User", new { id = Id });
         }
-        public IActionResult editEmployee(Employee employee,string? changePassword, String? oldPassword, String? confirmPassword, String? newPassword)
+        public IActionResult EditEmployeePassword(VMValidatePassword UserData)
         {
             bool flag = true;
-            Employee value = _db.Employees.Find(employee.Id);
-               
-            if (changePassword == null)
+            if (ModelState.IsValid)
             {
-                value.Name = employee.Name;
-                value.Address = employee.Address;
-                value.Email = employee.Email;
-                if (employee.Password != null)
+                Employee value = _db.Employees.Find(UserData.EmployeeID);
+                if (value.Password != PwdEncryption.HashPassword(UserData.OldPassword))
                 {
-                    if (employee.Password.Length < 5)
-                    {
-                        TempData["type"] = "danger";
-                        TempData["editSuccessfulMessage"] = "Password must be atleast 5 character";
-                        return RedirectToAction("EmployeeEditProfile", "User", new { id = value.Id });
-                    }
-                    if (value.Password != employee.Password)
-                    {
-                        value.Password = new Password(employee.Password).HashPassword();
-                    }
-                }
-                TempData["type"] = "success";
-                TempData["editSuccessfulMessage"] = "Profile Update Successful";
-            }
-            else
-            {
-              
-              
-                if (confirmPassword == null || oldPassword == null || newPassword == null)
-                {
-                    TempData["PasswordErrorMessage"] = "Empty Fields";
+                    TempData["EditPasswordMessage"] = "Old password doesn't match";
                     flag = false;
+                }
+                else if (UserData.ConfirmPassword != UserData.NewPassword)
+                {
 
-                }
-                else if (confirmPassword != newPassword)
-                {
-                    TempData["PasswordErrorMessage"] = "New password and confirm password must match";
-                    flag = false;
-
-                }
-                else if (newPassword.Length < 5)
-                {
-                    TempData["PasswordErrorMessage"] = "Password must be atleast 5 character";
+                    TempData["EditPasswordMessage"] = "New password and confirm password doesn't match";
                     flag = false;
                 }
-                else if (employee.Password != new Password(oldPassword).HashPassword())
-                {
-                    TempData["PasswordErrorMessage"] = "Old password doesn't match";
-                    flag = false;
-
-                }
-              
                 else
                 {
-                    value.Password =new Password(confirmPassword).HashPassword(); ;
-                    TempData["PasswordErrorMessage"] = "Password Reset Successful";
+                    value.Password = PwdEncryption.HashPassword(UserData.ConfirmPassword);
+                    _db.SaveChanges();
+                    TempData["EditPasswordMessage"] = "Password changed successfully";
+                    TempData["type"] = "success";
                 }
             }
             if (!flag)
             {
                 TempData["type"] = "danger";
-                return RedirectToAction("EmployeeEditProfile", "User", new { id = value.Id });
+            }
+            return RedirectToAction("EmployeeEditProfile", "User", new { id = UserData.EmployeeID });
+        }
+        public IActionResult EditEmployeeData(Employee employee)
+        {
+            Employee value = _db.Employees.Find(employee.Id);
+            value.Name = employee.Name;
+            value.Address = employee.Address;
+            value.Email = employee.Email;
+            if (employee.Password != null)
+            {
+                if (employee.Password.Length < 5)
+                {
+                    TempData["type"] = "danger";
+                    TempData["EditProfileMessage"] = "Password must be atleast 5 character";
+                    return RedirectToAction("EmployeeEditProfile", "User", new { id = value.Id });
+                }
+                if (value.Password != employee.Password)
+                {
+                    value.Password = PwdEncryption.HashPassword(employee.Password);
+                }
             }
             value.UpdatedAt = DateTime.Now;
             _db.SaveChanges();
             TempData["type"] = "success";
+            TempData["EditProfileMessage"] = "Profile Update Successful";
             return RedirectToAction("EmployeeEditProfile", "User", new { id = value.Id });
         }
         public IActionResult redirectPage()
@@ -197,6 +181,6 @@ namespace employeeDailyTaskRecorder.Controllers
             }
             return RedirectToAction("EmployeeTask", "UserTask");
         }
-     
+
     }
 }

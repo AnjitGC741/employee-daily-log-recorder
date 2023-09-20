@@ -30,7 +30,6 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Address</th>
-                @*     <th>Status</th>*@
                 <th>Action</th>
             </tr>
         </thead>
@@ -61,16 +60,6 @@
                     </td>
                     <td>@(employee.Email)</td>
                     <td>@(employee.Address)</td>
-                    @*   <td>
-                        @if (employee.Status)
-                        {
-                        <p class="custom-badge badge-success">Active</p>
-                        }
-                        else
-                        {
-                        <p class="custom-badge badge-danger">InActive</p>
-                        }
-                        </td>*@
                     <td>
                         <div class="d-flex" style="gap:10px">
                             <a asp-controller="User" asp-action="EmployeeEditProfile" asp-route-id=@(employee.Id) style="color:black;text-decoration:none">
