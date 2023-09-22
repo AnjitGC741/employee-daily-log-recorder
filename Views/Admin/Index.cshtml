@@ -5,47 +5,63 @@
     string formattedDate = currentDateTime.ToString("MM/dd/yyyy");
 }
 <div class="container">
-    <h1 class="text-center mb-3">Task List</h1>
-        <div class="d-flex justify-content-end w-100 mb-4" style="gap:10px;">
-        <button class="btn btn-light">
-             Today's Date :   @(formattedDate)
-        </button>
-        @if (Model.CanAddTask)
-        {
-            <button id="showAddPopupBox" class="btn btn-success">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+    <div class="d-flex justify-content-between w-100 mb-4" style="gap:10px;">
+        <h2 class="text-center mb-3">Task List</h2>
+        <div>
+            @if (Model.CanAddTask)
+            {
+                <button id="showAddPopupBox" class="btn btn-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                    </svg>
+                    Add Task
+                </button>
+            }
+            <button id="sendEmailBtn" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                    <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
                 </svg>
-                Add Task
+                Send Email
             </button>
-        }
-        <a asp-controller="Admin" asp-action="SendEmail" class="text-decoration-none;" style="color:white;">
-        <button class="btn btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
-                <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
-            </svg>
-            Send Email
-        </button>
-         </a>
 
+        </div>
     </div>
-    <div class="d-flex justify-content-end w-100 mb-4">
-        <div class="w-100">
-            <form class="w-100 d-flex align-items-center" style="gap:5px" asp-controller="Admin" asp-action="index" method="post">
-                <label>From</label>
-                <input type="date" name="FromDate" value="@Model.strFromDate" class="form-control" />
-                <label>To</label>
-                <input type="date" name="ToDate" value="@Model.strToDate" class="form-control" />
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 mb-2">
+                <div class="row">
+                    <div class="col-2">
+                        <label class="mt-1">From</label>
+                    </div>
+                    <div class="col-10">
+                        <input type="date" name="FromDate" value=@Model.strFromDate class="form-control" />
 
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-2">
+                <div class="row">
+                    <div class="col-2">
+                        <label class="mt-1">To</label>
+                    </div>
+                    <div class="col-10">
+                        <input type="date" name="ToDate" value=@Model.strToDate class="form-control" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center  mb-2">
                 @Html.DropDownList("EmployeeId", ViewBag.EmployeeList, "Select Employee", new { @class = "form-control", @id = "employeeList"})
-
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center  mb-2">
                 <div class="d-flex w-100" style="gap:5px">
                     <input class="form-control mr-sm-2 w-100" type="text" placeholder="Search by Task" name="SearchTerm">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
+
 
 
     <div>
@@ -104,6 +120,20 @@
 <script>
 
      $(document).ready(function () {
+            $("#sendEmailBtn").click(function () {
+            $.ajax({
+                url: "/Admin/SendEmail",
+                type: "POST",
+                success: function (response) {
+                    alert(response);
+                },
+                error: function (error) {
+                    alert("An error occurred: " + error.responseText);
+                }
+            });
+        });
+
+
            $('#employeeList').select2();
             $('#summernote').summernote({
         placeholder: 'Enter your task',

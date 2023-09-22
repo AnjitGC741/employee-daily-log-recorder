@@ -157,8 +157,6 @@ D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\employeeDailyTaskRecorder.pdb
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\employeeDailyTaskRecorder.genruntimeconfig.cache
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\ref\employeeDailyTaskRecorder.dll
-D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\BCrypt.Net-Next.dll
-D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\HtmlAgilityPack.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\MessagePack.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\MessagePack.Annotations.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\Microsoft.AspNetCore.Razor.Language.dll
@@ -359,3 +357,6 @@ D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\tr-TR\Hangfire.Core.resources.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\zh-TW\Hangfire.Core.resources.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\zh\Hangfire.Core.resources.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\Hangfire.AspNetCore.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\Hangfire.NetCore.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Release\net6.0\Hangfire.SqlServer.dll

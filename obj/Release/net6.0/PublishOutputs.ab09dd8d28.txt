@@ -6,9 +6,10 @@ D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\employeeDailyTaskRecorder.pdb
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Azure.Core.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Azure.Identity.dll
-D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\BCrypt.Net-Next.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Hangfire.AspNetCore.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Hangfire.Core.dll
-D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\HtmlAgilityPack.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Hangfire.NetCore.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Hangfire.SqlServer.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Humanizer.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\MessagePack.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\MessagePack.Annotations.dll

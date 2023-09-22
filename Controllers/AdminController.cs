@@ -14,11 +14,12 @@ namespace employeeDailyTaskRecorder.Controllers
     public class AdminController : Controller
     {
         private readonly ApplicationDbContext _db;
+        private readonly IConfiguration _configuration;
         private Employee _ActiveUser => SessionService.GetSession(HttpContext);
-        public AdminController(ApplicationDbContext db) : base()
+        public AdminController(ApplicationDbContext db, IConfiguration configuration) : base()
         {
             _db = db;
-
+            _configuration = configuration;
         }
         [HttpGet]
         [HttpPost]
@@ -86,9 +87,11 @@ namespace employeeDailyTaskRecorder.Controllers
             string emailBody = $"<html><body><h2>Today's employee tasks</h2>{tableHtml.ToString()}</body></html>";
             if (task != null)
             {
-                await EmailService.SendEmailAsync("admin@antsware.com", "Todays Task",emailBody);
+                await EmailService.SendEmailAsync(_configuration, emailBody, null, "Today's Employee Tasks");
+
             }
-            return RedirectToAction("Index", "Admin");
+
+            return Content("Email sent successfully");
         }
 
     }

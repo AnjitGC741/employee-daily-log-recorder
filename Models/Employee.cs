@@ -44,13 +44,14 @@ namespace employeeDailyTaskRecorder.Models
         public string? EmployeeName { get; set; }
         public string? EmployeeEmail { get; set; }
         public string SearchTerm { get; set; }
-        public string strToDate => ToDate.ToString("yyyy/MM/dd");
-        public string strFromDate => FromDate.ToString("yyyy/MM/dd");
+        public string strToDate => ToDate.ToString("yyyy-MM-dd");
+        public string strFromDate => FromDate.ToString("yyyy-MM-dd");
         public IList<Record> TaskList { get; set; } = new List<Record>();
         public IList<Employee> EmployeeList { get; set; } = new List<Employee>();
         public VMAdminIndex()
         {
-            FromDate = DateTime.Now.AddMonths(-1);
+          //  FromDate = DateTime.Now.AddMonths(-1);
+            FromDate = DateTime.Now;
             ToDate = DateTime.Now;
         }
     }

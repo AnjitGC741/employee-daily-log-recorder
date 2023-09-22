@@ -71,7 +71,6 @@ namespace employeeDailyTaskRecorder.Controllers
         {
             Employee data = _db.Employees.Find(employeeId);
             data.IsDeleted = true;
-            /* _db.Employees.Remove(data);*/
             _db.SaveChanges();
             return RedirectToAction("Index", "User");
         }
