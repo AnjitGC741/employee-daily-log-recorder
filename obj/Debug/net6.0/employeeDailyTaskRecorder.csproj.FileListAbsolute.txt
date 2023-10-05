@@ -360,3 +360,11 @@ D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0\employeeDailyTaskRecorder.pdb
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0\employeeDailyTaskRecorder.genruntimeconfig.cache
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0\ref\employeeDailyTaskRecorder.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Debug\net6.0\SixLabors.ImageSharp.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\bin\Debug\net6.0\itextsharp.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0\staticwebassets\msbuild.employeeDailyTaskRecorder.Microsoft.AspNetCore.StaticWebAssets.props
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0\staticwebassets\msbuild.build.employeeDailyTaskRecorder.props
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.employeeDailyTaskRecorder.props
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.employeeDailyTaskRecorder.props
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Debug\net6.0\staticwebassets.pack.json

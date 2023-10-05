@@ -9,7 +9,7 @@
             isPresent = 1;
         }
     }
-    string[] colors = { "#352f44", "#512b81", "#cd1818", "#810ca8", "#1e5128","#d89216","#200f21" };
+    string[] colors = { "#352f44", "#512b81", "#cd1818", "#810ca8", "#1e5128", "#d89216", "#200f21" };
 }
 <div class="container">
     <h1 class="text-center mb-3">User List</h1>
@@ -36,26 +36,26 @@
         <tbody>
             @foreach (var employee in Model.EmployeeList)
             {
-                     Random random = new Random();
-        int randomNumber = random.Next(0, 5);
+                Random random = new Random();
+                int randomNumber = random.Next(0, 5);
                 <tr>
                     <td>@(sn++)</td>
                     <td>
                         <div class="d-flex" style="align-items:center;gap:10px;">
-                            <div class="rounded-circle d-flex justify-content-center"   style="background-color:@colors[randomNumber];width:50px;height:50px;overflow:hidden;align-items:center;">
+                            <div class="rounded-circle d-flex justify-content-center" style="background-color:@colors[randomNumber];width:50px;height:50px;overflow:hidden;align-items:center;">
                                 @if (employee.ProfileImg.ToString() != "")
                                 {
                                     <img class="w-100 h-100" src=@(employee.ProfileImg) alt="" style="object-fit:cover">
                                 }
                                 else
                                 {
-                                    <h3  class="text-white mt-2">@(char.ToUpper(employee.Name[0]))</h3>
+                                    <h3 class="text-white mt-2">@(char.ToUpper(employee.Name[0]))</h3>
                                 }
                             </div>
                             <p class="mt-2 fw-bold">@(employee.Name)</p>
                         </div>
                         <script>
-                             
+
                         </script>
                     </td>
                     <td>@(employee.Email)</td>
@@ -99,82 +99,101 @@
 
 </div>
 @section Scripts{
-<script>
-     if(@isPresent === 1){
-               $("#blurBox").removeClass("d-none");
-          $("#addUserDataFormBox").removeClass("d-none");
-     }
-    function validatePassword(x){
-        event.preventDefault();
-       var passwordValue = $("#editUserDataFormBox_" + x + " input[name='Password']").val();
-       if(passwordValue.length < 5){
-        $("#editUserDataFormBox_" + x + " input[name='Password']").addClass("is-invalid");
-        $("#editUserDataFormBox_" + x + " span").text("Password length must be atlest 5")
-          return false;
-       }
-    const form = document.getElementById("updateUserForm_"+x);
-    const formAction = "@Url.Action("editUser", "User")";
-    form.action = formAction;
-    form.submit();
-
-    }
-           $("#closeAddUserPopUpBtn").on("click",()=>{
-          $("#blurBox").addClass("d-none");
-          $("#emailErrorMsg").addClass("d-none");
-          $("#addUserDataFormBox").addClass("d-none");
-         });
-
-
-        $("#showAddUserPopupBox").on("click",()=>{
-          $("#blurBox").removeClass("d-none");
-          $("#addUserDataFormBox").removeClass("d-none");
-        });
-            function showUserEditBox(x) {
-                  $("#blurBox").removeClass("d-none");
-                $("#editUserDataFormBox_" + x).removeClass("d-none");
-            }
-
-            function hideEditUserDataFormBox(x) {
-                  $("#blurBox").addClass("d-none");
-                $("#" + x).addClass("d-none");
-            }
-
-            $("#showAddDataPasswordCheckBox").on("change", () => {
-              if ($("#showAddDataPasswordCheckBox").prop("checked")) {
-              $("#addDataPassword").attr("type", "text");
-              } else {
-              $("#addDataPassword").attr("type", "password");
-                      }
-               });
-              $('#addEmployeeForm').validate({
-        rules: {
-            Name: "required",
-            Address: "required",
-            EmpType: "required",
-            Email: {
-                required: true,
-                email: true
-            },
-            Password: {
-                required: true,
-                minlength: 5
-            }
-        },
-        messages: {
-            Name: "Name cannot be empty",
-            Address: "Address cannot be empty",
-            EmpType: "Role cannot be empty",
-            Email: {
-                required: "Email cannot be empty",
-                email: "Enter a valid email"
-            },
-            Password: {
-                required: "Password cannot be empty",
-                minlength: "Password length must be at least 5 characters"
-            }
+    <script>
+        if (@isPresent === 1) {
+            $("#blurBox").removeClass("d-none");
+            $("#addUserDataFormBox").removeClass("d-none");
         }
-    });
+        function validatePassword(x) {
+            event.preventDefault();
+            var passwordValue = $("#editUserDataFormBox_" + x + " input[name='Password']").val();
+            if (passwordValue.length < 5) {
+                $("#editUserDataFormBox_" + x + " input[name='Password']").addClass("is-invalid");
+                $("#editUserDataFormBox_" + x + " span").text("Password length must be atlest 5")
+                return false;
+            }
+            const form = document.getElementById("updateUserForm_" + x);
+            const formAction = "@Url.Action("editUser", "User")";
+            form.action = formAction;
+            form.submit();
 
-</script>
+        }
+        $("#closeAddUserPopUpBtn").on("click", () => {
+            $("#blurBox").addClass("d-none");
+            $("#emailErrorMsg").addClass("d-none");
+            $("#addUserDataFormBox").addClass("d-none");
+        });
+
+
+        $("#showAddUserPopupBox").on("click", () => {
+            $("#blurBox").removeClass("d-none");
+            $("#addUserDataFormBox").removeClass("d-none");
+        });
+        function showUserEditBox(x) {
+            $("#blurBox").removeClass("d-none");
+            $("#editUserDataFormBox_" + x).removeClass("d-none");
+        }
+
+        function hideEditUserDataFormBox(x) {
+            $("#blurBox").addClass("d-none");
+            $("#" + x).addClass("d-none");
+        }
+
+        $("#showAddDataPasswordCheckBox").on("change", () => {
+            if ($("#showAddDataPasswordCheckBox").prop("checked")) {
+                $("#addDataPassword").attr("type", "text");
+            } else {
+                $("#addDataPassword").attr("type", "password");
+            }
+        });
+        $('#addEmployeeForm').validate({
+    rules: {
+        Name: "required",
+        Address: "required",
+        EmpRole: "required",
+        EmpStage: "required",
+        EmpType: "required",
+        JoinDate: "required",
+        CurrentStageCompletionDate: "required",
+        ContactNumber: {
+            required: true,
+            number: true,
+            minlength: 10
+        },
+        Email: {
+            required: true,
+            email: true
+        },
+        Password: {
+            required: true,
+            minlength: 5
+        }
+    },
+    messages: {
+        Name: "Name cannot be empty",
+        Address: "Address cannot be empty",
+        EmpRole: "Role cannot be empty",
+        EmpType: "Type cannot be empty",
+        EmpStage: "Stage cannot be empty",
+        JoinDate: "Date cannot be empty",
+        CurrentStageCompletionDate: "Date cannot be empty",
+        ContactNumber: {
+            required: "Contact number cannot be empty",
+            number: "It must be a number",
+            minlength: "Number must be of 10 digits"
+        },
+        Email: {
+            required: "Email cannot be empty",
+            email: "Enter a valid email"
+        },
+        Password: {
+            required: "Password cannot be empty",
+            minlength: "Password length must be at least 5 characters"
+        }
+    }
+});
+
+
+    </script>
 
     }

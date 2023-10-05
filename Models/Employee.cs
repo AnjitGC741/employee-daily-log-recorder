@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
 namespace employeeDailyTaskRecorder.Models
 
 {
@@ -18,6 +17,12 @@ namespace employeeDailyTaskRecorder.Models
         [Required]
         [MinLength(5)]
         public string Password { get; set; }
+        public string ContactNumber { get; set; }
+        public EnumEmployeeGender Gender { get; set; }
+        public EnumEmployeeStage EmpStage { get; set; }
+        public EnumMajorRole EmpRole { get; set; }
+        public DateTime JoinDate { get; set; }
+        public DateTime CurrentStageCompletionDate { get; set; }
         public EnumEmployeeType EmpType { get; set; }
         public bool IsDeleted { get; set; } = false;
         public bool Status { get; set; } = true;
@@ -35,6 +40,23 @@ namespace employeeDailyTaskRecorder.Models
         Admin = 1,
         Employee = 2
     }
+    public enum EnumEmployeeStage
+    {
+        Internship = 1,
+        Probation_Period = 2,
+        Contractual = 3
+    }
+    public enum EnumMajorRole
+    {
+        CustomerSupport_QA = 1,
+        Developer = 2,
+        Admin = 3
+    }
+    public enum EnumEmployeeGender
+    {
+        Male = 1,
+        Female = 2
+    }
     public class VMAdminIndex
     {
         public bool CanAddTask { get; set; }
@@ -50,7 +72,7 @@ namespace employeeDailyTaskRecorder.Models
         public IList<Employee> EmployeeList { get; set; } = new List<Employee>();
         public VMAdminIndex()
         {
-          //  FromDate = DateTime.Now.AddMonths(-1);
+            //  FromDate = DateTime.Now.AddMonths(-1);
             FromDate = DateTime.Now;
             ToDate = DateTime.Now;
         }

@@ -136,6 +136,18 @@
                     <label class="form-label">Address</label>
                     <input type="text" name="Address" class="form-control" value=@(user.Address)>
                 </div>
+                <div class="mb-3">
+                    <label class="form-label">Contact Number</label>
+                    <input type="text" name="ContactNumber" class="form-control" value=@(user.ContactNumber)>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Gender</label>
+                    <select name="Gender" class="form-control mb-3">
+                        <option value=@(user.Gender)>@(user.Gender)</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                </div>
                 @if (Model.EmployeeID != user.Id)
                 {
                     <div class="mb-3">
@@ -145,6 +157,32 @@
                             <option value="1">Admin</option>
                             <option value="2">Employee</option>
                         </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Employee Role</label>
+                        <select name="EmpRole" class="form-control mb-3">
+                            <option value=@(user.EmpRole)>@(user.EmpRole)</option>
+                            <option value="1">Customer Support/QA</option>
+                            <option value="2">Developer</option>
+                            <option value="3">Admin</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Employee Stage</label>
+                        <select name="EmpStage" class="form-control mb-3">
+                            <option value=@(user.EmpStage)>@(user.EmpStage)</option>
+                            <option value="1">Intern</option>
+                            <option value="2">Probation period(Trial)</option>
+                            <option value="3">Contractual</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Join Date</label>
+                        <input type="date" name="JoinDate" class="form-control" value=@(user.JoinDate.ToString("yyyy-MM-dd"))>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Current Stage Completion Date</label>
+                        <input type="date" name="CurrentStageCompletionDate" class="form-control" value=@(user.CurrentStageCompletionDate.ToString("yyyy-MM-dd"))>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Password</label>

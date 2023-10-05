@@ -6,11 +6,13 @@ D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\employeeDailyTaskRecorder.pdb
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Azure.Core.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Azure.Identity.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\BouncyCastle.Crypto.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Hangfire.AspNetCore.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Hangfire.Core.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Hangfire.NetCore.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Hangfire.SqlServer.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Humanizer.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\itextsharp.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\MessagePack.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\MessagePack.Annotations.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
@@ -71,6 +73,7 @@ D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\NuGet.ProjectModel.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\NuGet.Protocol.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\NuGet.Versioning.dll
+D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\SixLabors.ImageSharp.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\System.Composition.AttributedModel.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\System.Composition.Convention.dll
 D:\projects\employeeDailyTaskRecorder\employeeDailyTaskRecorder\obj\Release\net6.0\PubTmp\Out\System.Composition.Hosting.dll

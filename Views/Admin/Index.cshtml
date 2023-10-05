@@ -23,43 +23,58 @@
                 </svg>
                 Send Email
             </button>
-
+            @*for uploading the pdf and is compressed*@
+            @*                       <div class="bg-warning mb-0">
+            <form method="POST" class="m-0" enctype="multipart/form-data" id="myForm2">
+            <label for="change2">
+            <div >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-upload" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383z" />
+            <path fill-rule="evenodd" d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3z" />
+            </svg>Upload Pdf
+            </div>
+            </label>
+            <input type="file" id="change2" name="pdfFile" style="display:none;">
+            </form>
+            </div> *@
         </div>
     </div>
     <div class="container mb-2">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-3 mb-2">
-                <div class="row">
-                    <div class="col-2">
-                        <label class="mt-1">From</label>
-                    </div>
-                    <div class="col-10">
-                        <input type="date" name="FromDate" value=@Model.strFromDate class="form-control" />
+        <form asp-controller="Admin" asp-action="Index" method="POST">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+                            <label class="mt-1">From</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="date" name="FromDate" value=@Model.strFromDate class="form-control" />
 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 mb-2">
-                <div class="row">
-                    <div class="col-2">
-                        <label class="mt-1">To</label>
+                <div class="col-12 col-md-6 col-lg-3 mb-2">
+                    <div class="row">
+                        <div class="col-2">
+                            <label class="mt-1">To</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="date" name="ToDate" value=@Model.strToDate class="form-control" />
+                        </div>
                     </div>
-                    <div class="col-10">
-                        <input type="date" name="ToDate" value=@Model.strToDate class="form-control" />
-                    </div>
-                </div>
 
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center  mb-2">
-                @Html.DropDownList("EmployeeId", ViewBag.EmployeeList, "Select Employee", new { @class = "form-control", @id = "employeeList"})
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center  mb-2">
-                <div class="d-flex w-100" style="gap:5px">
-                    <input class="form-control mr-sm-2 w-100" type="text" placeholder="Search by Task" name="SearchTerm">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center  mb-2">
+                    @Html.DropDownList("EmployeeId", ViewBag.EmployeeList, "Select Employee", new { @class = "form-control", @id = "employeeList"})
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 d-flex align-items-center  mb-2">
+                    <div class="d-flex w-100" style="gap:5px">
+                        <input class="form-control mr-sm-2 w-100" type="text" placeholder="Search by Task" name="SearchTerm">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 
 
@@ -117,86 +132,92 @@
 </div>
 
 @section Scripts{
-<script>
+    <script>
 
-     $(document).ready(function () {
+        $(document).ready(function () {
             $("#sendEmailBtn").click(function () {
-            $.ajax({
-                url: "/Admin/SendEmail",
-                type: "POST",
-                success: function (response) {
-                    alert(response);
-                },
-                error: function (error) {
-                    alert("An error occurred: " + error.responseText);
-                }
+                $.ajax({
+                    url: "/Admin/SendEmail",
+                    type: "POST",
+                    success: function (response) {
+                        alert(response);
+                    },
+                    error: function (error) {
+                        alert("An error occurred: " + error.responseText);
+                    }
+                });
             });
-        });
+            var fileInput2 = document.querySelector("#change2");
+            fileInput2.addEventListener("change", function () {
+                const form = document.getElementById("myForm2");
+                const formAction = "@Url.Action("UploadPdf", "Admin")";
+                form.action = formAction;
+                form.submit();
+            });
 
-
-           $('#employeeList').select2();
+            $('#employeeList').select2();
             $('#summernote').summernote({
-        placeholder: 'Enter your task',
-        tabsize: 2,
-        height: 200,
-          toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'italic', 'underline', 'clear']],
-            ['para', ['ul']],
-            ['view', ['codeview']],
-        ]
+                placeholder: 'Enter your task',
+                tabsize: 2,
+                height: 200,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'italic', 'underline', 'clear']],
+                    ['para', ['ul']],
+                    ['view', ['codeview']],
+                ]
 
-      });
+            });
 
-        $("#closeAddPopUpBtn").on("click", () => {
-            $("#blurBox").addClass("d-none");
-            $("#addDataFormBox").addClass("d-none");
+            $("#closeAddPopUpBtn").on("click", () => {
+                $("#blurBox").addClass("d-none");
+                $("#addDataFormBox").addClass("d-none");
+            });
+
+            $("#showAddPopupBox").on("click", () => {
+                $("#blurBox").removeClass("d-none");
+                $("#addDataFormBox").removeClass("d-none");
+            });
+
+            $("#addTodayTask").on("click", () => {
+                event.preventDefault();
+                var value = $("#summernote").val();
+                if (value === "") {
+                    $("#emptyAddTaskInputFiled").text("Task is empty")
+                    return false;
+                }
+                else {
+                    const form = document.getElementById("addTaskForm");
+                    const formAction = "@Url.Action("addTask", "UserTask")";
+                    form.action = formAction;
+                    form.submit();
+                }
+
+            })
+            $('#myTable').DataTable();
         });
 
-        $("#showAddPopupBox").on("click", () => {
+        function showAdminEditBox(x) {
             $("#blurBox").removeClass("d-none");
-            $("#addDataFormBox").removeClass("d-none");
-        });
-
-        $("#addTodayTask").on("click",()=>{
-     event.preventDefault();
-      var value = $("#summernote").val();
-      if(value === ""){
-          $("#emptyAddTaskInputFiled").text("Task is empty")
-          return false;
-      }
-      else{
-          const form = document.getElementById("addTaskForm");
-    const formAction = "@Url.Action("addTask", "UserTask")";
-    form.action = formAction;
-    form.submit();
-      }
-
-    })
-        $('#myTable').DataTable();
-    });
-
-     function showAdminEditBox(x) {
-              $("#blurBox").removeClass("d-none");
             $("#editAdminTaskBox_" + x).removeClass("d-none");
-                           $('#summernoteedit_'+x).summernote({
-        placeholder: 'Enter your task',
-        tabsize: 2,
-        height: 200,
-          toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'italic', 'underline', 'clear']],
-            ['para', ['ul']],
-            ['view', ['codeview']],
-        ]
-      });
+            $('#summernoteedit_' + x).summernote({
+                placeholder: 'Enter your task',
+                tabsize: 2,
+                height: 200,
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'italic', 'underline', 'clear']],
+                    ['para', ['ul']],
+                    ['view', ['codeview']],
+                ]
+            });
         }
 
         function hideAdminEdit(x) {
-              $("#blurBox").addClass("d-none");
+            $("#blurBox").addClass("d-none");
             $("#" + x).addClass("d-none");
         }
 
-</script>
+    </script>
 
 }

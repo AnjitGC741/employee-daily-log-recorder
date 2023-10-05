@@ -28,7 +28,20 @@
                 <div class="d-flex" style="gap:15px">
                     <p class="text-muted fs-6"><ion-icon name="person" class="me-2"></ion-icon>@(user.EmpType)</p>
                     <p class="text-muted fs-6"><ion-icon name="mail" class="me-2"></ion-icon>@(user.Email)</p>
-                    <p class="text-muted fs-6"><ion-icon name="location" class="me-2"></ion-icon>@(user.Address)</p>
+                        <p class="text-muted fs-6"><ion-icon name="location" class="me-2"></ion-icon>@(user.Address)</p>
+                    <p class="text-muted fs-6"><ion-icon name="call" class="me-2"></ion-icon>@(user.ContactNumber)</p>
+                    @if(user.Gender.ToString() == "Male")
+                    {
+                        <p class="text-muted fs-6"><ion-icon name="man" class="me-2"></ion-icon>@(user.Gender)</p>
+                    }
+                    else
+                    {
+                            <p class="text-muted fs-6"><ion-icon name="female" class="me-2"></ion-icon>@(user.Gender)</p>
+
+                    }
+                        <p class="text-muted fs-6"><ion-icon name="briefcase" class="me-2"></ion-icon>@(user.EmpRole)</p>
+                        <p class="text-muted fs-6"><ion-icon name="people" class="me-2"></ion-icon>@(user.EmpStage)</p>
+
                 </div>
             </div>
             }

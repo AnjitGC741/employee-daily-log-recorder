@@ -7,6 +7,8 @@ using employeeDailyTaskRecorder.CustomAttributes;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using employeeDailyTaskRecorder.Mail;
 using System.Text;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 namespace employeeDailyTaskRecorder.Controllers
 {
     //[GeneralAuthorization]
@@ -15,11 +17,14 @@ namespace employeeDailyTaskRecorder.Controllers
     {
         private readonly ApplicationDbContext _db;
         private readonly IConfiguration _configuration;
+        private readonly IWebHostEnvironment _webHostEnvironment;
         private Employee _ActiveUser => SessionService.GetSession(HttpContext);
-        public AdminController(ApplicationDbContext db, IConfiguration configuration) : base()
+        public AdminController(ApplicationDbContext db, IConfiguration configuration, IWebHostEnvironment webHostEnvironment) : base()
         {
             _db = db;
             _configuration = configuration;
+            _webHostEnvironment = webHostEnvironment;
+
         }
         [HttpGet]
         [HttpPost]
@@ -92,6 +97,33 @@ namespace employeeDailyTaskRecorder.Controllers
             }
 
             return Content("Email sent successfully");
+        }
+        public IActionResult UploadPdf(IFormFile? pdfFile)
+        {   
+            if(pdfFile != null && pdfFile.ContentType == "application/pdf")
+            {
+                string wwwRootPath = _webHostEnvironment.WebRootPath;
+                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(pdfFile.FileName);
+                string productPath = Path.Combine(wwwRootPath, @"Pdf");
+                string tempFilePath = Path.Combine(productPath, "temp_" + fileName);
+                using (var fileStream = new FileStream(tempFilePath, FileMode.Create))
+                {
+                    pdfFile.CopyTo(fileStream);
+                    var reader = new PdfReader(fileStream);
+                    var docuement = new Document();
+                    var writer = PdfWriter.GetInstance(docuement, fileStream);
+                    docuement.Open();
+                    for (var pageNumber = 1; pageNumber <= reader.NumberOfPages; pageNumber++)
+                    {
+                        var page = writer.GetImportedPage(reader, pageNumber);
+                        docuement.Add(iTextSharp.text.Image.GetInstance(page));
+                    }
+                    docuement.Close();
+                    var compressedPdfBytes = fileStream;
+                    return File(compressedPdfBytes, "application/pdf", "compressed.pdf");
+                }
+            }
+            return RedirectToAction("Index","Admin");
         }
 
     }

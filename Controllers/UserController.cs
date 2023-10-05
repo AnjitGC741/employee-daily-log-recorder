@@ -4,6 +4,9 @@ using employeeDailyTaskRecorder.Models;
 using employeeDailyTaskRecorder.HelperService;
 using employeeDailyTaskRecorder.CustomAttributes;
 using employeeDailyTaskRecorder.Hash;
+using SixLabors.ImageSharp.Formats.Jpeg;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
 
 namespace employeeDailyTaskRecorder.Controllers
 {
@@ -43,6 +46,12 @@ namespace employeeDailyTaskRecorder.Controllers
                 Employee value = new Employee();
                 value.Name = employee.Name;
                 value.Address = employee.Address;
+                value.ContactNumber = employee.ContactNumber;
+                value.Gender = employee.Gender;
+                value.EmpRole = employee.EmpRole;
+                value.EmpStage = employee.EmpStage;
+                value.JoinDate  = employee.JoinDate;
+                value.CurrentStageCompletionDate = employee.CurrentStageCompletionDate;
                 value.Email = employee.Email;
                 value.Password = PwdEncryption.HashPassword(employee.Password);
                 value.EmpType = employee.EmpType;
@@ -84,30 +93,41 @@ namespace employeeDailyTaskRecorder.Controllers
         }
         public IActionResult editProfileImg(int Id, IFormFile? profileImg)
         {
-            Employee empData = SessionService.GetSession(HttpContext);
+            //Employee empData = SessionService.GetSession(HttpContext);
             Employee data = _db.Employees.Find(Id);
             string wwwRootPath = _webHostEnvironment.WebRootPath;
             if (profileImg != null)
             {
                 string fileName = Guid.NewGuid().ToString() + Path.GetExtension(profileImg.FileName);
                 string productPath = Path.Combine(wwwRootPath, @"Img\Upload");
-                if (!string.IsNullOrEmpty(data.ProfileImg))
-                {
-                    var oldImagePath = Path.Combine(wwwRootPath, data.ProfileImg.TrimStart('\\'));
-                    if (System.IO.File.Exists(oldImagePath))
-                    {
-                        System.IO.File.Delete(oldImagePath);
-                    }
-                }
-                using (var fileStream = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
+                string tempFilePath = Path.Combine(productPath, "temp_" + fileName);
+                using (var fileStream = new FileStream(tempFilePath, FileMode.Create))
                 {
                     profileImg.CopyTo(fileStream);
                 }
+                using (var imageStream = new FileStream(tempFilePath, FileMode.Open))
+                {
+                    using (var image = Image.Load(imageStream))
+                    {
+                        image.Mutate(x => x.Resize(new ResizeOptions
+                        {
+                            Size = new Size(1024, 600),
+                            Mode = ResizeMode.Max
+                        }));
+                        image.Save(Path.Combine(productPath, fileName), new JpegEncoder
+                        {
+                            Quality = 70
+                        });
+                    }
+                }
+
+                System.IO.File.Delete(tempFilePath);
                 data.ProfileImg = @"/Img/Upload/" + fileName;
             }
             _db.SaveChanges();
             return RedirectToAction("EmployeeEditProfile", "User", new { id = Id });
         }
+
         public IActionResult deleteProfileImg(int Id)
         {
             Employee data = _db.Employees.Find(Id);
@@ -152,6 +172,12 @@ namespace employeeDailyTaskRecorder.Controllers
             value.Name = employee.Name;
             value.Address = employee.Address;
             value.Email = employee.Email;
+            value.ContactNumber = employee.ContactNumber;
+            value.Gender = employee.Gender;
+            value.EmpRole = employee.EmpRole;
+            value.EmpStage = employee.EmpStage;
+            value.JoinDate = employee.JoinDate;
+            value.CurrentStageCompletionDate = employee.CurrentStageCompletionDate;
             if (employee.Password != null)
             {
                 if (employee.Password.Length < 5)

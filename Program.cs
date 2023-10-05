@@ -60,7 +60,7 @@ app.MapHangfireDashboard();
 RecurringJob.AddOrUpdate<ISendEmail>(x => x.SendEmailToAdmin(), cronExpression: "0 0 14 * * ?");
 #pragma warning restore CS0618 // Type or member is obsolete
 #pragma warning disable CS0618 // Type or member is obsolete
-RecurringJob.AddOrUpdate<ISendEmail>(x => x.SendEmailToEmployee(), cronExpression: "0 0 10 * * ?");
+RecurringJob.AddOrUpdate<ISendEmail>(x => x.SendEmailToEmployee(), cronExpression: "0 0 11 * * ?");
 #pragma warning restore CS0618 // Type or member is obsolete
 app.Run();
 

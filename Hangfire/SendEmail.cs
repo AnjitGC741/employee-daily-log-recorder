@@ -52,18 +52,19 @@ namespace employeeDailyTaskRecorder.Hangfire
             List<Employee> employees = _db.Employees.ToList();
             List<Record> records = _db.Records.Include(x => x.Employee).ToList();
             var task = records.Where(x => x.TaskPerformedDate.ToString("MM/dd/yyyy") == formattedDate).ToList();
-            foreach (var employee in employees)
+            foreach (var employeeList in employees)
             {
-                var isTaskInserted = task.Where(x => x.EmployeeId == employee.Id).ToList();
-                if (!isTaskInserted.Any())
+                var isTaskInserted = task.Where(x => x.EmployeeId == employeeList.Id).FirstOrDefault();
+                if (isTaskInserted == null)
                 {
                     StringBuilder noticeHtml = new StringBuilder();
-                    noticeHtml.Append($"<p style='margin-bottom:10px;'>Dear {employee.Name}</p>");
-                    noticeHtml.Append("<p style='margin-bottom:10px;'>Please remember to submit today's task report on time. If you face any issues, contact to Admin.</p>");
+                    noticeHtml.Append($"<p style='margin-bottom:10px;'>Dear {employeeList.Name}</p>");
+                    noticeHtml.Append("<p style='margin-bottom:10px;'>Please remember to submit today's task report on time. If you face any issues, contact to Admin" +
+                        ".</p>");
                     noticeHtml.Append($"<p style='margin-bottom:10px;'>Best Regards</p>");
                     noticeHtml.Append($"<p style='margin-bottom:10px;'>Ant Pvt Ltd</p>");
                     string emailBody = $"<html><body>{noticeHtml.ToString()}</body></html>";
-                    await EmailService.SendEmailAsync(_configuration, emailBody ,employee.Email, "Today's Task Submission Reminder");
+                    await EmailService.SendEmailAsync(_configuration, emailBody ,employeeList.Email, "Today's Task Submission Reminder");
                 }
             }
             throw new NotImplementedException();

@@ -28,10 +28,12 @@
         .badge-danger {
             background-color: #F8D7DA;
         }
+
         .error {
             color: red;
         }
-    }
+
+        }
     </style>
 </head>
 <body>
@@ -54,7 +56,7 @@
                     </div>
                 </form>
             </div>
-            <div id="addUserDataFormBox" class="position-absolute d-none p-4 bg-white w-25 rounded">
+            <div id="addUserDataFormBox" class="position-absolute d-none p-4 bg-white w-50 rounded">
                 <div class="d-flex justify-content-end">
                     <button id="closeAddUserPopUpBtn" class="btn btn-danger mb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -75,19 +77,94 @@
                     <label>Name</label>
                     <input type="text" name="Name" class="form-control" placeholder="Enter Employee name" />
                     <p id="Name-error" class="error" for="name"></p>
-                    <label class="mt-2">Email</label>
-                    <input type="email" name="Email" class="form-control" placeholder="Enter Employee email" />
-                    <p id="Email-error" class="error" for="Email"></p>
-                    <label class="mt-2">Address</label>
-                    <input type="text" name="Address" class="form-control" placeholder="Enter Employee Address " />
-                    <p id="Address-error" class="error" for="Address"></p>
-                    <label class="mt-2">Role</label>
-                    <select name="EmpType" class="form-control">
-                        <option selected value="">Select a role</option>
-                        <option value="1">Admin</option>
-                        <option value="2">Employee</option>
-                    </select>
-                    <p id="EmpType-error" class="error" for="EmpType"></p>
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="mt-2">Email</label>
+                            <input type="email" name="Email" class="form-control" placeholder="Enter Employee email" />
+                            <p id="Email-error" class="error" for="Email"></p>
+                        </div>
+                        <div class="col-6">
+                            <label class="mt-2">Contact Number</label>
+                            <input type="text" name="ContactNumber" class="form-control" placeholder="Enter Employee number" />
+                            <p id="ContactNumber-error" class="error" for="ContactNumber"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="mt-2">Gender</label>
+                            <div class="d-flex w-100 pl-4 mt-2" style="gap: 40px">
+                                <div>
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           name="Gender"
+                                           id="Gender"
+                                           value="1" />
+                                    <label class="form-check-label">
+                                        Male
+                                    </label>
+                                </div>
+                                <div>
+                                    <input class="form-check-input"
+                                           type="radio"
+                                           name="Gender"
+                                           id="Gender"
+                                           value="2" />
+                                    <label class="form-check-label">
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <label class="mt-2">Address</label>
+                            <input type="text" name="Address" class="form-control" placeholder="Enter Employee Address " />
+                            <p id="Address-error" class="error" for="Address"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label class="mt-2">Current Stage</label>
+                            <select name="EmpStage" class="form-control">
+                                <option selected value="">Select a Employee Current Stage</option>
+                                <option value="1">Intern</option>
+                                <option value="2">Probation period(Trial)</option>
+                                <option value="3">Contractual</option>
+                            </select>
+                            <p id="EmpStage-error" class="error" for="EmpStage"></p>
+                        </div>
+                        <div class="col-4">
+                            <label class="mt-2">Type</label>
+                            <select name="EmpType" class="form-control">
+                                <option selected value="">Select a Employee Type</option>
+                                <option value="1">Admin</option>
+                                <option value="2">Employee</option>
+                            </select>
+                            <p id="EmpType-error" class="error" for="EmpType"></p>
+                        </div>
+                        <div class="col-4">
+                            <label class="mt-2">Organization Role</label>
+                            <select name="EmpRole" class="form-control">
+                                <option selected value="">Select a Employee role</option>
+                                <option value="1">Customer Support/QA</option>
+                                <option value="2">Developer</option>
+                                <option value="3">Admin</option>
+                            </select>
+                            <p id="EmpRole-error" class="error" for="EmpRole"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="mt-2">Join Date</label>
+                            <input type="date" name="JoinDate" class="form-control" placeholder="Enter Employee Joining Date" />
+                            <p id="Join-error" class="error" for="JoinDate"></p>
+                        </div>
+                        <div class="col-6">
+                            <label class="mt-2">Current Stage Completion Date</label>
+                            <input type="date" name="CurrentStageCompletionDate" class="form-control" placeholder="Enter Employee Completion Date" />
+                            <p id="CurrentStageCompletionDate-error" class="error" for="CurrentStageCompletionDate"></p>
+                        </div>
+                    </div>
+
                     <label class="mt-2">Password</label>
                     <input type="password" name="Password" id="addDataPassword" class="form-control" placeholder="Enter Password " />
                     <p id="Password-error" class="error" for="Password"></p>
@@ -145,13 +222,13 @@
     </div>
 
     @RenderBody()
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
