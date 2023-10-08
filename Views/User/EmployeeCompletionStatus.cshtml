@@ -1,0 +1,201 @@
+﻿@model VMAdminIndex
+@{
+    int sn = 1;
+ }
+<div class="container">
+    <div class="row">
+        <div class="d-flex col-lg-6 col-xl-3">
+            <div class="flex-fill card-stats mb-4 mb-xl-0 card">
+                <div class="card-body" style="background-color:#FFE2E6;border:1px solid #FA597E">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="text-uppercase text-dark mb-0 card-title">
+                                <small style="font-weight: bold">Total Employee</small>
+                            </h5>
+                            <span class="h2 font-weight-bold mb-0">@Model.TotalEmployee</span>
+                        </div>
+                        <div class="col-auto col">
+                            <div class="text-white rounded-circle shadow p-2 d-flex flex-column justify-content-center" style="background-color:#FA597E">
+                                <ion-icon name="people" class="fs-1"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex col-lg-6 col-xl-3">
+            <div class="flex-fill card-stats mb-4 mb-xl-0 card">
+                <div class="card-body" style="background-color:#FFF4DE;border:1px solid #FE947A">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="text-uppercase text-dark mb-0 card-title">
+                                <small style="font-weight: bold">Intern</small>
+                            </h5>
+                            <span class="h2 font-weight-bold mb-0">@Model.TotalIntern</span>
+                        </div>
+                        <div class="col-auto col">
+                            <div class="text-white rounded-circle shadow p-2 d-flex flex-column justify-content-center" style="background-color:#FE947A">
+                                <ion-icon name="school" class="fs-1"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex col-lg-6 col-xl-3">
+            <div class="flex-fill card-stats mb-4 mb-xl-0 card">
+                <div class="card-body" style="background-color:#DCFCE7;border:1px solid #3CD755">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="text-uppercase text-dark mb-0 card-title">
+                                <small style="font-weight: bold">Provision Period</small>
+                            </h5>
+                            <span class="h2 font-weight-bold mb-0">@Model.TotalProvisionPeriod</span>
+                        </div>
+                        <div class="col-auto col">
+                            <div class="text-white rounded-circle shadow p-2 d-flex flex-column justify-content-center" style="background-color:#3CD755">
+                                <ion-icon name="time" class="fs-1"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex col-lg-6 col-xl-3">
+            <div class="flex-fill card-stats mb-4 mb-xl-0 card">
+                <div class="card-body" style="background-color:#F4E8FF;border:1px solid #BF83FF">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="text-uppercase text-dark mb-0 card-title">
+                                <small style="font-weight: bold">Contractual</small>
+                            </h5>
+                            <span class="h2 font-weight-bold mb-0">@Model.TotalContractual</span>
+                        </div>
+                        <div class="col-auto col">
+                            <div class="text-white rounded-circle shadow p-2 d-flex flex-column justify-content-center" style="background-color:#BF83FF">
+                                <ion-icon name="briefcase" class="fs-1"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="d-flex col-lg-6 col-xl-3">
+            <div class="flex-fill card-stats mb-4 mb-xl-0 card">
+                <div class="card-body" style="background-color:#AED9E0;border:1px solid #005792">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="text-uppercase text-dark mb-0 card-title">
+                                <small style="font-weight: bold">Admin</small>
+                            </h5>
+                            <span class="h2 font-weight-bold mb-0">@Model.TotalAdmin</span>
+                        </div>
+                        <div class="col-auto col">
+                            <div class="text-white rounded-circle shadow p-2 d-flex flex-column justify-content-center" style="background-color:#005792">
+                                <ion-icon name="person" class="fs-1"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex col-lg-6 col-xl-3">
+            <div class="flex-fill card-stats mb-4 mb-xl-0 card">
+                <div class="card-body" style="background-color:#D7CCC8;border:1px solid #6C4F3D">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="text-uppercase text-dark mb-0 card-title">
+                                <small style="font-weight: bold">QA</small>
+                            </h5>
+                            <span class="h2 font-weight-bold mb-0">@Model.TotalQA</span>
+                        </div>
+                        <div class="col-auto col">
+                            <div class="text-white rounded-circle shadow p-2 d-flex flex-column justify-content-center" style="background-color:#6C4F3D">
+                                <ion-icon name="checkmark-circle" class="fs-1"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex col-lg-6 col-xl-3">
+            <div class="flex-fill card-stats mb-4 mb-xl-0 card">
+                <div class="card-body" style="background-color:#B2DFDB;border:1px solid #008080">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="text-uppercase text-dark mb-0 card-title">
+                                <small style="font-weight: bold">Developer</small>
+                            </h5>
+                            <span class="h2 font-weight-bold mb-0">@Model.TotalDeveloper</span>
+                        </div>
+                        <div class="col-auto col">
+                            <div class="text-white rounded-circle shadow p-2 d-flex flex-column justify-content-center" style="background-color:#008080">
+                                <ion-icon name="construct" class="fs-1"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex col-lg-6 col-xl-3">
+            <div class="flex-fill card-stats mb-4 mb-xl-0 card">
+                <div class="card-body" style="background-color:#FFF4DE;border:1px solid #FE947A">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="text-uppercase text-dark mb-0 card-title">
+                                <small style="font-weight: bold">Male/Female</small>
+                            </h5>
+                            <span class="h2 font-weight-bold mb-0">@Model.TotalMale/@Model.TotalFemale</span>
+                        </div>
+                        <div class="col-auto col">
+                            <div class="text-white rounded-circle shadow p-2 d-flex flex-column justify-content-center" style="background-color:#FE947A">
+                                <ion-icon name="man" class="fs-1"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+
+    <div class="d-flex justify-content-between mb-4 mt-4">
+        <h3 class="fs-5 text-secondary">Completion By @ViewBag.CompletionDays Days</h3>
+        <form asp-action="EmployeeCompletionStatus" asp-controller="User" method="POST" class="d-flex" style="gap:10px;">
+                <input class="form-control mr-sm-2" name="days" type="search" placeholder="Sort by days" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Filter</button>
+            </form>
+     
+    </div>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>SN</th>
+                <td>Employee Name</td>
+                <td>Employee Type</td>
+                <td>Employee Role</td>
+                <td>Join Date</td>
+                <td>Completion Date</td>
+               @*  <td>Remaining Days</td> *@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.EmployeeList)
+            {
+               <tr>
+                    <td>@(sn++)</td>
+                    <td>@(item.Name)</td>
+                   <td>@(item.EmpType)</td>
+                    <td>@(item.EmpRole)</td>
+                    <td>@(item.JoinDate)</td>
+                    <td>@(item.CurrentStageCompletionDate)</td>
+                  @*   <td>@(item.CurrentStageCompletionDate - DateTime.Now)</td> *@
+               </tr> 
+            }
+        </tbody>
+    </table>
+</div>
+ 

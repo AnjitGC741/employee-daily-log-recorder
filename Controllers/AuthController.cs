@@ -41,7 +41,7 @@ namespace employeeDailyTaskRecorder.Controllers
 
                 if (EmpData.IsAdmin)
                 {
-                    return RedirectToAction("Index", "Admin");
+                    return RedirectToAction("EmployeeCompletionStatus", "User");
 
                 }
                 return RedirectToAction("EmployeeTask", "UserTask");

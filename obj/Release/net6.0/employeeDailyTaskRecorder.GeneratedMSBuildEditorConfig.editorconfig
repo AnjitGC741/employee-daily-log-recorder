@@ -48,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclRhc2tcRW1wbG95ZWVUYXNrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/projects/employeeDailyTaskRecorder/employeeDailyTaskRecorder/Views/User/EmployeeCompletionStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFbXBsb3llZUNvbXBsZXRpb25TdGF0dXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/projects/employeeDailyTaskRecorder/employeeDailyTaskRecorder/Views/User/EmployeeEditProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFbXBsb3llZUVkaXRQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

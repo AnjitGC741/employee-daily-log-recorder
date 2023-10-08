@@ -13,7 +13,7 @@ namespace employeeDailyTaskRecorder.Controllers
     [GeneralAuthorization]
     public class UserController : Controller
     {
-        private readonly ApplicationDbContext _db;  
+        private readonly ApplicationDbContext _db;
         private readonly IWebHostEnvironment _webHostEnvironment;
         public UserController(ApplicationDbContext db, IWebHostEnvironment webHostEnvironment)
         {
@@ -26,6 +26,22 @@ namespace employeeDailyTaskRecorder.Controllers
             Result.EmployeeList = _db.Employees.Where(x => x.IsDeleted == false).ToList();
             return View(Result);
         }
+        public IActionResult EmployeeCompletionStatus(int? days)
+        {
+            ViewBag.CompletionDays = days??15;
+            VMAdminIndex Result = new VMAdminIndex();
+            Result.TotalEmployee = _db.Employees.Count();
+            Result.TotalIntern = _db.Employees.Where(x => x.EmpStage == EnumEmployeeStage.Internship).Count();
+            Result.TotalProvisionPeriod = _db.Employees.Where(x => x.EmpStage == EnumEmployeeStage.Probation_Period).Count();
+            Result.TotalContractual = _db.Employees.Where(x => x.EmpStage == EnumEmployeeStage.Contractual).Count();
+            Result.TotalAdmin = _db.Employees.Where(x => x.EmpRole == EnumMajorRole.Admin).Count();
+            Result.TotalDeveloper = _db.Employees.Where(x => x.EmpRole == EnumMajorRole.Developer).Count();
+            Result.TotalQA = _db.Employees.Where(x => x.EmpRole == EnumMajorRole.CustomerSupport_QA).Count();
+            Result.TotalMale = _db.Employees.Where(x => x.Gender == EnumEmployeeGender.Male).Count(); 
+            Result.TotalFemale = _db.Employees.Where(x => x.Gender == EnumEmployeeGender.Female).Count();
+            Result.EmployeeList = _db.Employees.Where(x => x.CurrentStageCompletionDate.Date >= DateTime.Now && x.CurrentStageCompletionDate <= DateTime.Now.AddDays(days??15)).ToList();
+            return View(Result);
+         }
         [AdminAuthorization]
         public IActionResult UserDetails(int id)
         {
@@ -50,7 +66,7 @@ namespace employeeDailyTaskRecorder.Controllers
                 value.Gender = employee.Gender;
                 value.EmpRole = employee.EmpRole;
                 value.EmpStage = employee.EmpStage;
-                value.JoinDate  = employee.JoinDate;
+                value.JoinDate = employee.JoinDate;
                 value.CurrentStageCompletionDate = employee.CurrentStageCompletionDate;
                 value.Email = employee.Email;
                 value.Password = PwdEncryption.HashPassword(employee.Password);
@@ -87,7 +103,7 @@ namespace employeeDailyTaskRecorder.Controllers
         {
             Employee empData = SessionService.GetSession(HttpContext);
             VMValidatePassword UserData = new VMValidatePassword();
-             UserData.EmployeeID = empData.Id;
+            UserData.EmployeeID = empData.Id;
             UserData.EmployeeList = _db.Employees.Where(x => x.Id == id).ToList();
             return View(UserData);
         }
@@ -174,6 +190,7 @@ namespace employeeDailyTaskRecorder.Controllers
             value.Email = employee.Email;
             value.ContactNumber = employee.ContactNumber;
             value.Gender = employee.Gender;
+            value.EmpType = employee.EmpType;
             value.EmpRole = employee.EmpRole;
             value.EmpStage = employee.EmpStage;
             value.JoinDate = employee.JoinDate;
@@ -206,6 +223,7 @@ namespace employeeDailyTaskRecorder.Controllers
             }
             return RedirectToAction("EmployeeTask", "UserTask");
         }
+
 
     }
 }

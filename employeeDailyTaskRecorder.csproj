@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\LeaveRequest\" />
     <Folder Include="wwwroot\Img\Upload\" />
     <Folder Include="wwwroot\Pdf\" />
     <Folder Include="wwwroot\tenant\ANTS\css\" />

@@ -30,6 +30,7 @@ namespace employeeDailyTaskRecorder.Models
         public DateTime UpdatedAt { get; set; } = DateTime.Now;
         public string ProfileImg { get; set; } = String.Empty;
         public ICollection<Record> Records { get; set; }
+        public ICollection<LeaveRequest> LeaveRequests { get; set; }
         [NotMapped]
         public bool IsAdmin => EmpType == EnumEmployeeType.Admin;
         [NotMapped]
@@ -65,6 +66,15 @@ namespace employeeDailyTaskRecorder.Models
         public int? EmployeeID { get; set; }
         public string? EmployeeName { get; set; }
         public string? EmployeeEmail { get; set; }
+        public int? TotalEmployee { get; set; }
+        public int? TotalIntern { get; set; }
+        public int? TotalProvisionPeriod { get; set; }  
+        public int? TotalContractual { get; set; }
+        public int? TotalAdmin { get; set; }
+        public int? TotalDeveloper { get; set; }
+        public int? TotalQA { get; set; }
+        public int? TotalMale { get; set; }
+        public int? TotalFemale { get; set; }   
         public string SearchTerm { get; set; }
         public string strToDate => ToDate.ToString("yyyy-MM-dd");
         public string strFromDate => FromDate.ToString("yyyy-MM-dd");
